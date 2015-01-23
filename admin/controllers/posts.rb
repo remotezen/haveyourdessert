@@ -43,7 +43,7 @@ Blog::Admin.controllers :posts do
     @post = Post.find(params[:id])
     if @post
       if @post.update_attributes(params[:post])
-        unless params[:post][:image].empty?
+        unless params[:post][:image].blank?
           upload = Upload.new
           upload.file = params[:post][:image]
           upload.save

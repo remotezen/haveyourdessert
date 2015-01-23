@@ -17,6 +17,7 @@ gem 'sinatra', git: 'git@github.com:sinatra/sinatra.git'
 gem 'rake'
 
 # Component requirements
+gem 'compass'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'bcrypt'

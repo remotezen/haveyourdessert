@@ -1,6 +1,20 @@
-<% content_for :include do %>
-  <%=feed_tag(:rss, url(:posts, :index, format: :rss), title: "RSS")  %>
-  <%=feed_tag(:atom, url(:posts, :index, format: :atom), title: "ATOM")  %>
-<%end%>
-<%=link_to 'rss', url_for('posts.rss')%>
+<ul class="small-block-grid-4">
+  <% @posts.each do |post| %>
+    <li class="index-list">
+      <%= image_tag post.image_url(:thumb) %>
+    
+    </li>
+  <li class="index-list">
+      <%= post.title %>
+  
+  </li>
+  <li class="index-list">
+      <%= post.body %>
+  
+  </li>
+
+
+    
+  <%end%>
+</ul>
 
