@@ -5,8 +5,6 @@ module Blog
     register Padrino::Mailer
     register Padrino::Helpers
     register CompassInitializer
-
-
     enable :sessions
 
     ##

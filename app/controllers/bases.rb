@@ -19,7 +19,9 @@ Blog::App.controllers :bases do
   #   'Hello world!'
   # end
   
-  get :show do
+  get :index do
+    @post = Post.last
+    render 'bases/index' 
 
   end
 
