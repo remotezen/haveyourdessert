@@ -25,4 +25,5 @@ Blog::App.controllers :bases do
 
   end
 
+
 end

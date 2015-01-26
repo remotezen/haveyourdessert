@@ -1,3 +1,5 @@
+
+#unicorn -E development -c config/unicorn.rb -D
 source 'https://rubygems.org'
 
 gem 'sinatra', git: 'git@github.com:sinatra/sinatra.git'

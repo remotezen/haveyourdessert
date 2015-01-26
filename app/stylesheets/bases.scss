@@ -1,0 +1,25 @@
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+@mixin standard-border{  
+  border: solid 1px green;
+  @include border-radius(.5em)
+}
+@mixin standard-spacing{  
+  margin:1.5em;
+  padding:1.5em;
+  line-height:1.8em;
+}
+.title-wrapper{  
+  @include standard-spacing;
+}
+.image-wrapper{  
+  @include standard-spacing;
+}
+.body-wrapper{  
+  @include standard-spacing;
+  @include standard-border;
+}

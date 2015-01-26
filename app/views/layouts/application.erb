@@ -11,18 +11,35 @@
     <title><%= @title.present? ? "#{@title} | Padrino Admin" : "Padrino Admin" %></title>
     <%= favicon_tag "favicon.ico" %>
     <link href='http://fonts.googleapis.com/css?family=Varela' rel=stylesheet />
-    <%= stylesheet_link_tag 'application', 'post' %>
+    <%= stylesheet_link_tag 'application', 'post', 'bases'%>
     <%= javascript_include_tag 'vendor/modernizr' %>
   </head>
 
     <%= javascript_include_tag 'vendor/jquery', 'vendor/fastclick' %>
   <body>
-  <%= image_tag("Newlogo.png") %>
   <div class="row">
-    <div class="small-12 small-centered">
-      <%=partial 'layouts/menu'%>
+    <div class="small-10 small-centered">
+      <div class="mast-head-wraper center">
+    <%= image_tag("mast_head.png") %>
+    </div>
+
   </div>
-    <%= yield %>
+</div>
+
+  <div class="row">
+    <div class="small-10 small-centered">
+        <div class="menu-wrapper center">
+      <%=partial 'layouts/menu'%>
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-10 small-centered">
+      <div class="main-wrapper center">
+
+          <%= yield %>
+    </div>
+  </div>
+</div>
 
 </div>
   </body>

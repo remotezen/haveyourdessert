@@ -7,6 +7,10 @@ module Blog
     register CompassInitializer
     enable :sessions
 
+   get :index do
+    redirect url(:bases, :index)
+  end
+
     ##
     # Caching support.
     #

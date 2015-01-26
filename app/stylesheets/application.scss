@@ -3,3 +3,48 @@
 @import "foundation";
 @import "post";
 @import "navigation";
+body{ background: #000; }
+.main-wrapper{ background:#fff; 
+  min-height:10em;
+  text-align:center;
+  width:800px;
+
+  margin-top:1em;
+
+  padding-left:1.6em;
+  padding-right:1.6em;
+
+}
+.center{ 
+  margin-left:auto;
+  margin-right:auto; 
+  text-align:center
+}
+.mast-head-wrapper{ 
+  
+}
+.menu-wrapper{  
+  margin-top:1em;
+  padding-left:1.6em;
+  padding-right:1.6em;
+}
+
+.top-bar {
+    background: black;
+}
+
+.top-bar-section li a:not(.button) {
+    background: #220000 !important;   
+}
+
+.top-bar-section li a:not(.button):hover {
+    background: #333333 !important;   
+}
+
+.top-bar-section ul li.active > a {
+    background: gray !important;   
+}
+
+.top-bar-section ul li.active > a:hover {
+    background: #444444 !important;   
+}
