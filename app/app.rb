@@ -67,5 +67,6 @@ module Blog
     #     render 'errors/500'
     #   end
     #
+
   end
 end
