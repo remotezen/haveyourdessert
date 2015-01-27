@@ -10,6 +10,7 @@
     <meta name=viewport content='width=device-width,initial-scale=1' />
     <title><%= @title.present? ? "#{@title} | Padrino Admin" : "Padrino Admin" %></title>
     <%= favicon_tag "favicon.ico" %>
+    <link type="text/css" rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" />
     <link href='http://fonts.googleapis.com/css?family=Varela' rel=stylesheet />
     <%= stylesheet_link_tag 'application', 'post', 'bases'%>
     <%= javascript_include_tag 'vendor/modernizr' %>
@@ -29,7 +30,7 @@
   <div class="row">
     <div class="small-10 small-centered">
         <div class="menu-wrapper center">
-      <%=partial 'layouts/menu'%>
+          <%=partial 'layouts/menu'%>
     </div>
   </div>
   <div class="row">

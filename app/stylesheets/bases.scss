@@ -4,22 +4,37 @@
       -ms-border-radius: $radius;
           border-radius: $radius;
 }
+$grey-charcoal: #2E2E2E;
+
+@mixin title-font{  
+  font-family:"Varela";
+}
 @mixin standard-border{  
   border: solid 1px green;
-  @include border-radius(.5em)
+  @include border-radius(.5em);
 }
 @mixin standard-spacing{  
-  margin:1.5em;
+  margin:2em;
   padding:1.5em;
   line-height:1.8em;
 }
 .title-wrapper{  
+
   @include standard-spacing;
 }
 .image-wrapper{  
+  @include border-radius(.5em);
+  padding: 1em;
+  background:#eee;
+}
+.main-wrapper{  
+  @include border-radius(.5em);
+  border:3px solid  grey;
   @include standard-spacing;
 }
-.body-wrapper{  
-  @include standard-spacing;
-  @include standard-border;
+.main-menu{  
+  color:white;
+  font-size:2em;
+  @include border-radius(.5em);
+  background:$grey-charcoal;
 }

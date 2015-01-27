@@ -1,15 +1,10 @@
-<ul class="small-block-grid-3 index-container">
+<ul class="small-block-grid-2 index-container">
   <% @posts.each do |post| %>
-    <li class="index-list">
-      <%= image_tag post.image_url(:thumb) %>
-    
-    </li>
   <li class="index-list">
-      <%= post.title %>
-  
+      <%= link_to(post.title,"posts/show/#{post.permalink}") %>
   </li>
   <li class="index-list">
-      <%= post.body %>
+      <%= truncate_words(post.body, length:8) %>
   
   </li>
 

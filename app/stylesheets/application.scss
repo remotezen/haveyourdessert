@@ -3,6 +3,9 @@
 @import "foundation";
 @import "post";
 @import "navigation";
+@import "settings";
+
+$grey-charcoal: #2E2E2E;
 body{ background: #000; }
 .main-wrapper{ background:#fff; 
   min-height:10em;
@@ -27,14 +30,16 @@ body{ background: #000; }
   margin-top:1em;
   padding-left:1.6em;
   padding-right:1.6em;
+  
+  border:3px solid  grey;
 }
 
 .top-bar {
-    background: black;
+    background: $grey-charcoal;
 }
 
 .top-bar-section li a:not(.button) {
-    background: #220000 !important;   
+    background: $grey-charcoal !important;   
 }
 
 .top-bar-section li a:not(.button):hover {
@@ -42,7 +47,7 @@ body{ background: #000; }
 }
 
 .top-bar-section ul li.active > a {
-    background: gray !important;   
+    background: black !important;   
 }
 
 .top-bar-section ul li.active > a:hover {

@@ -1,4 +1,4 @@
-Blog::App.controllers :posts do
+Blog::App.controllers :errors do
   
   # get :index, :map => '/foo/bar' do
   #   session[:foo] = 'bar'
@@ -19,20 +19,9 @@ Blog::App.controllers :posts do
   #   'Hello world!'
   # end
   
+  get :index  do
+    render 'shared/search_error'
+  end
 
-  get :index, provides: [:html, :rss, :atom] do
-    @posts = Post.order(created_at: :desc)
-    render 'posts/index'
-  end
-  
-  get :show, :with => :id do
-    @post = Post.find_by_permalink(params[:id])
-    if @post
-    render 'bases/index'
-    else
-      flash[:notice] = "no posts meet your criteria"
-       render 'errors/index'
-    end
-  end
 
 end
