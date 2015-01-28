@@ -1,27 +1,6 @@
-@mixin border-radius($radius) {
-  -webkit-border-radius: $radius;
-     -moz-border-radius: $radius;
-      -ms-border-radius: $radius;
-          border-radius: $radius;
-}
-$grey-charcoal: #2E2E2E;
+@import "variables";
+@import "mixins";
 
-@mixin title-font{  
-  font-family:"Varela";
-}
-@mixin standard-border{  
-  border: solid 1px green;
-  @include border-radius(.5em);
-}
-@mixin standard-spacing{  
-  margin:2em;
-  padding:1.5em;
-  line-height:1.8em;
-}
-.title-wrapper{  
-
-  @include standard-spacing;
-}
 .image-wrapper{  
   @include border-radius(.5em);
   padding: 1em;
@@ -31,6 +10,8 @@ $grey-charcoal: #2E2E2E;
   @include border-radius(.5em);
   border:3px solid  grey;
   @include standard-spacing;
+  line-height: $standard-line-height;
+  text-align:left;
 }
 .main-menu{  
   color:white;

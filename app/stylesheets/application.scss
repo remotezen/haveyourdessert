@@ -4,8 +4,9 @@
 @import "post";
 @import "navigation";
 @import "settings";
+@import "variables";
+@import "mixins";
 
-$grey-charcoal: #2E2E2E;
 body{ background: #000; }
 .main-wrapper{ background:#fff; 
   min-height:10em;

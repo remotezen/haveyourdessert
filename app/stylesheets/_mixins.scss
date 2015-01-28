@@ -1,0 +1,23 @@
+@mixin title-font{  
+  font-family:"Varela";
+}
+@mixin standard-border{  
+  border: solid 1px green;
+  @include border-radius(.5em);
+}
+@mixin standard-spacing{  
+  margin:2em;
+  padding:1.5em;
+  line-height:1.8em;
+}
+.title-wrapper{  
+
+  @include standard-spacing;
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}

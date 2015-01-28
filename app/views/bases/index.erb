@@ -20,28 +20,25 @@
 
   <% form_tag url_for(:comments, :create), 
     method: :post  do %>
-      <%= label_tag :comment %><br />
-      <%= text_field_tag :comment %>
     <p>
+  <i class="fi-comment comment-large">Comment</i>
+      <%= text_area_tag :comment %>
+      </p>
       <%= hidden_field_tag :post_id, value: @post.id %>
-    </p>
-    <p>
       <%= hidden_field_tag :user_id, value: current_user.id %>
-    </p>
     <p class="button"><%= submit_tag %></p>
   <%end %>
 
   <%#----<%= @post.comments.inspect %>
   <ul class="comment-container">
-    <% @post.comments.each do |c| %>
+
+  <i class="fi-comments comment-large">Comments</i>
+    <% @post.comments.reverse.each do |c| %>
       <li class="comment-item">
+      <%= gravatar_for(c.user, { size:30 }) %>
         <%= c.comment %>
-    </li>
-      <li class="comment-item">
-        <%= gravatar_for(c.user) %>
-    </li>
-    <li class="comment-item time-ago">
-      <%= time_ago_in_words(c.created_at)%> ago
+        <br>
+        <%= time_ago_in_words(c.created_at)%> ago
     </li>
   <% end%>
   </ul>
