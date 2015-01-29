@@ -10,7 +10,6 @@
   @include border-radius(.5em);
   border:3px solid  grey;
   @include standard-spacing;
-  line-height: $standard-line-height;
   text-align:left;
 }
 .main-menu{  
@@ -19,3 +18,33 @@
   @include border-radius(.5em);
   background:$grey-charcoal;
 }
+.nav-link a{  
+  color:#CCC;
+  font-size:.9em !important;
+
+}
+.nav-link a:hover{  
+  color:#222;
+}
+.post-body{ 
+  line-height: 20px;
+}
+.comment-container{  
+  background:#efe;
+  width:35em;
+  list-style-type:none;
+  color: #666;
+  border: solid  #aaa 1px;
+  @include border-radius(.5em)
+}
+.comment-container li{  
+  margin-top: .8em;
+}
+.time-ago{  
+  opacity: .3;
+}
+.comment-user-name{  
+  position: relative;
+  left: -4em;
+}
+

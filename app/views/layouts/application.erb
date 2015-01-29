@@ -15,8 +15,7 @@
     <%= stylesheet_link_tag 'application', 'post', 'bases', 'comment'%>
     <%= javascript_include_tag 'vendor/modernizr' %>
   </head>
-
-    <%= javascript_include_tag 'vendor/jquery', 'vendor/fastclick' %>
+    <%= javascript_include_tag 'vendor/jquery', 'vendor/fastclick', 'vendor/jquery.pjax' %>
   <body>
   <div class="row">
     <div class="small-10 small-centered">
@@ -36,7 +35,6 @@
   <div class="row">
     <div class="small-10 small-centered">
       <div class="main-wrapper center">
-
           <%= yield %>
     </div>
   </div>

@@ -1,0 +1,34 @@
+
+  <ul class="comment-container center" id="comment" >
+
+  <i class="fi-comment-quotes comment-large">Comments</i>
+  <span class="nav-link">
+    <a href="#Home-Top">Read Post</a>
+  </span>
+    <% comment.comments.reverse.each do |c| %>
+      <li class="comment-user-name">
+      <%= gravatar_for(c.user, { size:30 }) %>
+      <span class="time-ago">
+        <%= time_ago_in_words(c.created_at)%> ago
+    </span>
+    </li>
+    <li>
+        <%= c.comment %>
+    </li>
+  <% end%>
+  </ul>
+<%else%>
+<p>
+<strong>
+  In order to comment you must log in or sign up
+</strong>
+  <ul>
+    <li>
+      <%= link_to"login", url_for(:sessions, :new) %>
+    </li>
+    <li>
+      <%= link_to "signup", url_for(:users, :new) %>
+    </li>
+</ul>
+</p>
+<!-- comment for this post -->

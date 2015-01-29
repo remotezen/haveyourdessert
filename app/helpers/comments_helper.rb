@@ -3,6 +3,10 @@
 module Blog
   class App
     module CommentsHelper
+      
+      def is_pjax?
+        env['HTTP_X_PJAX']
+      end
       # def simple_helper_method
       # ...
       # end

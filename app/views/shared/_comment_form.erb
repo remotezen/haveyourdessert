@@ -1,0 +1,15 @@
+<div class="comment-form">
+  <!---------------------------------------------------if they are logged -->
+
+  <% form_tag url_for(:comments, :create), 
+    method: :post  do %>
+    <p>
+  <i class="fi-comment comment-large">Comment</i>
+      <%= text_area_tag :comment %>
+      </p>
+      <%= hidden_field_tag :post_id, value: comment_form.id %>
+      <%= hidden_field_tag :user_id, value: current_user.id %>
+    <p class="button"><%= submit_tag %></p>
+  <%end %>
+
+</div>

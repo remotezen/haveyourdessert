@@ -1,11 +1,16 @@
-
 <div class = "center image-wrapper">
   <%= image_tag(@post.image) %>
 </div>
-<p class="center title-wrapper">
+<p class="center title-wrapper" id="Home-Top" >
 <h3>
 <strong>
 <%= @post.title %>
+<br>
+<span class="nav-link">
+  <a href="#comment">
+  <i class="fi-comment icon-small">Comments</i>
+  </a>
+</span>
 </strong>
 </h3>
 </p>
@@ -13,51 +18,12 @@
 <p class="center body-wrapper">
  <%= @post.body %>
 </p>
-<div class="comment-form">
-  
-  <!---------------------------------------------------if they are logged -->
 <% if logged_in? %>
-
-  <% form_tag url_for(:comments, :create), 
-    method: :post  do %>
-    <p>
-  <i class="fi-comment comment-large">Comment</i>
-      <%= text_area_tag :comment %>
-      </p>
-      <%= hidden_field_tag :post_id, value: @post.id %>
-      <%= hidden_field_tag :user_id, value: current_user.id %>
-    <p class="button"><%= submit_tag %></p>
-  <%end %>
+  <%= partial 'shared/comment_form', object: @post %>
+<%end%>
 
   <%#----<%= @post.comments.inspect %>
-  <ul class="comment-container">
-
-  <i class="fi-comments comment-large">Comments</i>
-    <% @post.comments.reverse.each do |c| %>
-      <li class="comment-item">
-      <%= gravatar_for(c.user, { size:30 }) %>
-        <%= c.comment %>
-        <br>
-        <%= time_ago_in_words(c.created_at)%> ago
-    </li>
-  <% end%>
-  </ul>
-
-<%else%>
-<p>
-<strong>
-  In order to comment you must log in or sign up
-</strong>
-  <ul>
-    <li>
-      <%= link_to"login", url_for(:sessions, :new) %>
-    </li>
-    <li>
-      <%= link_to "signup", url_for(:users, :new) %>
-    </li>
-</ul>
-</p>
-<!-- comment for this post -->
+  <% if logged_in? %>
+    <%= partial 'shared/comment', object:@post %>
 <%end%>
-</div>
 
