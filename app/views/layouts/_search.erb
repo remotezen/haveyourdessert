@@ -1,9 +1,13 @@
-      <span class="form-group">
 
-        <%form_tag '/search', 
-          class:'form-search navbar-form navbar-right search-form', 
-          method: 'get'do%>
-      <%=text_field_tag :search, value: params[:search] %>
-      <button class="btn btn-default" type="submit"><i class="fi-search"></i></button>
-      </span>
-  <%end%>
+<div class="small-6 columns search-form">
+  <form action="/search", method="get">
+      <div class="row collapse prefix-round">
+        <div class="small-2 columns">
+          <input type="submit" value="search" class="search-input button round prefix">Go</a>
+        </div>
+        <div class="small-10 columns">
+          <input type="text" name="search" placeholder="search the site... ">
+        </div>
+      </div>
+        </form>
+    </div>

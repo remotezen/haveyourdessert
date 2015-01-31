@@ -20,7 +20,10 @@ Blog::App.controllers :search do
   # end
   
   get :index do
-
+    search = params[:search]
+    @posts =  Post.where("title LIKE ? OR body LIKE ?", 
+                         "%#{search}%","%#{search}%").order(created_at: :DESC)
+    render 'search/index'
   end
 
 end

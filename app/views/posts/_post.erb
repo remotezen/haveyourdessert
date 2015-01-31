@@ -1,0 +1,10 @@
+<div class="small-4 columns">
+  <%= post_counter  %>
+  <%= link_to "#{post.title }", url_for(:posts, :show, id:post.permalink) %>
+</div>
+<div class="small-4 columns">
+  <%= truncate_words("#{post.body }", length:4) %>
+</div>
+<div class="small-4 columns">
+  <%= post.created_at %>
+</div>
