@@ -1,4 +1,9 @@
-<%form_tag '/search', class:'form-search', method: 'get'do%>
-  <i class="glyphicon glyphicon-cog"></i>
- <%=text_field_tag :search, value: params[:search] %>
-<%end%>
+      <span class="form-group">
+
+        <%form_tag '/search', 
+          class:'form-search navbar-form navbar-right search-form', 
+          method: 'get'do%>
+      <%=text_field_tag :search, value: params[:search] %>
+      <button class="btn btn-default" type="submit"><i class="fi-search"></i></button>
+      </span>
+  <%end%>

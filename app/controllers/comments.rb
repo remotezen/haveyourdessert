@@ -37,7 +37,7 @@ Blog::App.controllers :comments do
     @comment.post = post
     if @comment.save
       flash[:info] = "Your comment was saved"
-      redirect url('/')
+      redirect url('/#comment')
     else
       flash[:warning] = "There was problem saving your posted  comment"
       redirect url_for(:sessions, :new)

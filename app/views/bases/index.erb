@@ -18,12 +18,11 @@
 <p class="center body-wrapper">
  <%= @post.body %>
 </p>
-<% if logged_in? %>
-  <%= partial 'shared/comment_form', object: @post %>
-<%end%>
-
   <%#----<%= @post.comments.inspect %>
   <% if logged_in? %>
+    <%= partial 'shared/comment_form', object: @post %>
     <%= partial 'shared/comment', object:@post %>
+  <% else %>
+    <%=partial 'shared/comment_not_logged_in'%>
 <%end%>
 

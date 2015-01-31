@@ -2,7 +2,7 @@ class Uploader < CarrierWave::Uploader::Base
 
   include CarrierWave::MiniMagick
   storage :file
-  process :resize_to_fit =>[400, 400]
+  process :resize_to_fit =>[1000,1000]
   version :thumb do
     process :resize_to_fill => [50,50]
   end

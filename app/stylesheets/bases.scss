@@ -8,15 +8,15 @@
 }
 .main-wrapper{  
   @include border-radius(.5em);
-  border:3px solid  grey;
   @include standard-spacing;
   text-align:left;
 }
 .main-menu{  
   color:white;
-  font-size:2em;
+  font-size:1.4em;
   @include border-radius(.5em);
-  background:$grey-charcoal;
+  display:inline;
+  float:left;
 }
 .nav-link a{  
   color:#CCC;
@@ -27,7 +27,7 @@
   color:#222;
 }
 .post-body{ 
-  line-height: 20px;
+  border-bottom:dotted 1px $green-green ;
 }
 .comment-container{  
   background:#efe;
@@ -37,7 +37,7 @@
   border: solid  #aaa 1px;
   @include border-radius(.5em)
 }
-.comment-container li{  
+.comment-user-name{  
   margin-top: .8em;
 }
 .time-ago{  
@@ -47,4 +47,48 @@
   position: relative;
   left: -4em;
 }
+.user-comment{  
+  position: relative;
+  left:1em;
+  padding-bottom:1em;
+  color:999;
+}
+
+.comment-icon{  
+  color:#AAA !important;
+  font-size:2em;
+}
+.post-link a{  
+  text-decoration:underline;
+  font-style:italic;
+
+}
+.comment-form{  
+  margin-top:5em;
+}
+.comment-count{  
+  opacity:.8;
+  font-style:bold;
+  background:#aaa;
+  width:25em;
+  text-align:center;
+  @include border-radius(.5em);
+  border:solid 1px #222;
+  text-align:center;
+}
+.comment-submit{  
+  text-align:center;
+}
+
+.search-form
+{
+	vertical-align:top;
+	text-align:center;
+
+}
+.search-form input[type="text"]
+{
+	margin: 0;
+}
+
 

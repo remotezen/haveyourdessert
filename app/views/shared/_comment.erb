@@ -1,34 +1,19 @@
+<%# _comment.erb  %>
+<%#comments partial for bases/index  %>
+<%=partial 'comments/comment_header', object:comment%>
+<%#above in the header file for this partial  %>
 
   <ul class="comment-container center" id="comment" >
-
-  <i class="fi-comment-quotes comment-large">Comments</i>
-  <span class="nav-link">
-    <a href="#Home-Top">Read Post</a>
-  </span>
     <% comment.comments.reverse.each do |c| %>
-      <li class="comment-user-name">
-      <%= gravatar_for(c.user, { size:30 }) %>
+     <li class="comment-user-name">
+      <%= gravatar_for(c.user, { size:80 }) %>
       <span class="time-ago">
         <%= time_ago_in_words(c.created_at)%> ago
     </span>
     </li>
-    <li>
+    <li class="user-comment">
         <%= c.comment %>
-    </li>
-  <% end%>
+    <li>
+  <%end%>
   </ul>
-<%else%>
-<p>
-<strong>
-  In order to comment you must log in or sign up
-</strong>
-  <ul>
-    <li>
-      <%= link_to"login", url_for(:sessions, :new) %>
-    </li>
-    <li>
-      <%= link_to "signup", url_for(:users, :new) %>
-    </li>
-</ul>
-</p>
 <!-- comment for this post -->

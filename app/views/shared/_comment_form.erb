@@ -1,15 +1,16 @@
+
 <div class="comment-form">
   <!---------------------------------------------------if they are logged -->
 
   <% form_tag url_for(:comments, :create), 
     method: :post  do %>
     <p>
-  <i class="fi-comment comment-large">Comment</i>
-      <%= text_area_tag :comment %>
+    <%= text_area_tag :comment, placeholder: "Please enter in your comment...",  html:{cols:"20", rows:"1"}%>
       </p>
       <%= hidden_field_tag :post_id, value: comment_form.id %>
       <%= hidden_field_tag :user_id, value: current_user.id %>
-    <p class="button"><%= submit_tag %></p>
+
+    <p class="comment-submit center"><%= submit_tag "Comment", class:"button radius" %></p>
   <%end %>
 
 </div>

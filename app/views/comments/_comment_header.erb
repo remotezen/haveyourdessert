@@ -1,0 +1,14 @@
+<div class="comment-count center">
+  Comments as of
+  <%=time_split Time.now%> 
+  <br>
+  <span>
+    <strong>
+    <%= pluralize(comment_header.comments.count, "comment") %>
+  </strong>
+  </span>
+  <br>
+  <span class="post-link">
+  <a href="#Home-Top">Read Post</a>
+  </span>
+</div>

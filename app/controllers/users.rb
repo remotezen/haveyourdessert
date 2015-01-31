@@ -27,7 +27,7 @@ Blog::App.controllers :users do
     @user = User.new(params[:user])
     if @user.save
       flash[:notice] = "Welcome aboard"
-      redirect url_for(:bases, :new)
+      redirect url_for(:bases)
     else
       render 'users/new'
     end

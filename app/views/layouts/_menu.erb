@@ -1,13 +1,39 @@
-<div class="main-menu">
+<div class="row">
+  <div class="small-6 columns">
   <i class="fi-home">&nbsp<%=link_to('Home',url('/')) %></i>
   <i class="fi-archive">&nbsp<%=link_to('Archive', url_for(:posts, :index)) %></i>
-<div id="user_nav">
+
+ 
   <% if current_user %>
-    Logged in as <%= current_user.email %>.
+  <i class="fi-minus-circle">
     <%= link_to "Log out", url_for(:sessions, :destroy) %>
+  </i>
   <% else %>
-    <%= link_to "Sign up", url_for(:users, :new) %> or
+    <i class="fi-pencil">
+      <%= link_to "Sign up", url_for(:users, :new) %> 
+    </i>
+    <i class="fi-unlock">
     <%= link_to "log in", url_for(:sessions, :new) %>
+  </i>
+
   <% end %>
+  <i class="fi-rss">
+    <%= link_to "Feed", url('/posts.atom') %>
+
+</i>
 </div>
+<div class="small-6 columns">
+<div class="large-6 columns">
+      <div class="row collapse prefix-round">
+        <div class="small-3 columns">
+          <a href="#" class="button prefix">Go</a>
+        </div>
+        <div class="small-9 columns">
+          <input type="text" placeholder="Value">
+        </div>
+      </div>
+    </div>
+</div>
+
+
 </div>
