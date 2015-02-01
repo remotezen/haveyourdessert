@@ -79,6 +79,10 @@
 .comment-submit{  
   text-align:center;
 }
+.search-form{  
+  position:relative;
+  float:right;
+}
 
 
 .search-form input[type=submit]{  
@@ -106,3 +110,7 @@
   color:$coral;
 }
 .search-form{ float:right; }
+.footer-wrapper{  
+  background:$coral;
+  min-height:3em;
+}
