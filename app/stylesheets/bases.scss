@@ -109,8 +109,26 @@
 .top-links a{  
   color:$coral;
 }
+
 .search-form{ float:right; }
 .footer-wrapper{  
   background:$coral;
   min-height:3em;
+}
+.footer-wrapper{  
+  padding:.5em;
+  @include border-radius(.5em);
+  margin-bottom: 2em;
+
+}
+
+.footer-menu a{  
+  color:$grey-charcoal;
+}
+.footer-menu a:hover{  
+  color:blue;
+
+}
+footer-meny a:visited{  
+  color:#CCC;
 }

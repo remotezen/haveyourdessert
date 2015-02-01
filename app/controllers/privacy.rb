@@ -1,4 +1,4 @@
-Blog::App.controllers :bases do
+Blog::App.controllers :privacy do
   
   # get :index, :map => '/foo/bar' do
   #   session[:foo] = 'bar'
@@ -20,12 +20,7 @@ Blog::App.controllers :bases do
   # end
   
   get :index do
-    @post = Post.last
-    render 'bases/index' 
 
   end
-  get :about do
-  end
-
 
 end
