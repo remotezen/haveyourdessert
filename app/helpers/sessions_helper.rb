@@ -7,12 +7,15 @@ module Blog
       # ...
       # end
       def current_user
-        @current_user ||=User.find(session[:user_id]) if session[:user_id]
+        @current_user ||=
+        User.find(session[:user_id]) if session[:user_id]
       end
       
       def current_user?(user)
         current_user == user
       end
+      
+
      
       def logged_in?
         !current_user.nil?
@@ -27,6 +30,16 @@ module Blog
       end
       def current_user_id
         session[:user_id]
+      end
+
+      def is_admin?(user)
+        if logged_in?
+        id = session[:user_id]
+        @user = User.find(id) and (current_user = user)
+        @user.admin == true
+        else
+          false
+        end
       end
 
 

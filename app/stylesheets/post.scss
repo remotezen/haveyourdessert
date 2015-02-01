@@ -16,6 +16,20 @@ li.index-list{
 .search-results{  
   list-style-type:none;
 }
-.serach-results li{  
-  text-align:left;
+.counter{  
+  color:$greenblue;
+  border-bottom:1px $grey-charcoal dotted;
+}
+.counter a{  
+  color:$greenblue;
+}
+.counter a:visted{  
+  opacity:.6;
+}
+.counter a:hover{  
+  color:$coral;
+}
+.search_container{  
+  background:#eee;
+  font-size:1.2em;
 }

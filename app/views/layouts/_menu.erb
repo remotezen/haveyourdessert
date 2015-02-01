@@ -1,7 +1,7 @@
 <div class="row">
   <div class="small-6 columns top-links">
-  <i class="fi-home"><%=link_to('Home',url('/')) %></i>|
-  <i class="fi-archive"><%=link_to('Archive', url_for(:posts, :index)) %></i>|
+  <i class="fi-home"><%=link_to('Home',url('/')) %></i> |
+  <i class="fi-archive"><%=link_to('Archive', url_for(:posts, :index)) %></i> |
 
  
   <% if current_user %>
@@ -16,8 +16,14 @@
     </i>|
     <i class="fi-unlock">
     <%= link_to "log in", url_for(:sessions, :new) %>
-  </i>|
+  </i> |
   <% end %>
+  <% if false %>
+
+  <%end%>
+  <%if is_admin?(current_user)  %>
+    | <%= link_to "admin", url('/admin') %>
+  <%end%>
 </div>
   <%= partial '/layouts/search' %>
 </div>

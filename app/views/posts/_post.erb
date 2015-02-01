@@ -1,10 +1,15 @@
 <div class="small-4 columns">
-  <%= post_counter  %>
-  <%= link_to "#{post.title }", url_for(:posts, :show, id:post.permalink) %>
+  <span class="counter">
+   <%= post_counter  %>.
+    <%= link_to "#{post.title }", url_for(:posts, :show, id:post.permalink) %>
+
+ </span>
 </div>
-<div class="small-4 columns">
-  <%= truncate_words("#{post.body }", length:4) %>
+<div class="small-4 columns centered">
+  <span class="search-body">
+    <%= truncate_words("#{post.body }", length:4) %>
+</span>
 </div>
-<div class="small-4 columns">
-  <%= post.created_at %>
+<div class="small-4 columns centered">
+  <%= time_split(post.created_at) %>
 </div>
