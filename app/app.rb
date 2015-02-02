@@ -10,6 +10,7 @@ module Blog
    get :index do
     redirect url(:bases, :index)
   end
+   require 'profiler'
 
     ##
     # Caching support.

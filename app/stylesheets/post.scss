@@ -16,20 +16,33 @@ li.index-list{
 .search-results{  
   list-style-type:none;
 }
-.counter{  
-  color:$greenblue;
-  border-bottom:1px $grey-charcoal dotted;
-}
-.counter a{  
-  color:$greenblue;
-}
-.counter a:visted{  
-  opacity:.6;
-}
-.counter a:hover{  
-  color:$coral;
-}
 .search_container{  
   background:#eee;
   font-size:1.2em;
 }
+.search-header{  
+  margin-bottom:1em;
+}
+.search-header a{  
+  font-size:1.5em;
+  text-decoration:underline;
+  padding-left:3em;
+}
+.search-body{  
+  padding-left: 7em;
+}
+.search-container{  
+  margin-bottom:1.5em;
+}
+.search-date{  
+  text-align:center;
+
+  padding-left: 7em;
+  color:#CCC;
+}
+.search-counter{ 
+  text-align:center;
+  font-size:1.3em;
+  color: $grey-charcoal;
+}
+

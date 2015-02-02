@@ -1,11 +1,13 @@
 @import "variables";
 @import "mixins";
+/*  */ 
 
 .image-wrapper{  
   @include border-radius(.5em);
   padding: 1em;
   background:#eee;
 }
+/* */ 
 .main-wrapper{  
   @include border-radius(.5em);
   @include standard-spacing;
@@ -20,18 +22,19 @@
 }
 .nav-link a{  
   color:#CCC;
-  font-size:.9em !important;
 
 }
 .nav-link a:hover{  
   color:#222;
 }
+/* */ 
 .post-body{ 
   border-bottom:dotted 1px $green-green ;
 }
 .comment-container{  
   background:#efe;
-  width:35em;
+  /*
+   */
   list-style-type:none;
   color: #666;
   border: solid  #aaa 1px;
@@ -70,7 +73,6 @@
   opacity:.8;
   font-style:bold;
   background:#aaa;
-  width:25em;
   text-align:center;
   @include border-radius(.5em);
   border:solid 1px #222;
@@ -95,8 +97,6 @@
   background:$grey-charcoal;
   border:white 1px solid;
   color:#eee;
-  width:20em;
-
   -webkit-border-radius: 0 1em 1em 0;
      -moz-border-radius: 0 1em 1em 0;
       -ms-border-radius: 0 1em 1em 0;
@@ -113,7 +113,7 @@
 .search-form{ float:right; }
 .footer-wrapper{  
   background:$coral;
-  min-height:3em;
+  min-height:2em;
 }
 .footer-wrapper{  
   padding:.5em;
@@ -124,6 +124,7 @@
 
 .footer-menu a{  
   color:$grey-charcoal;
+  font-size:.9rem;
 }
 .footer-menu a:hover{  
   color:blue;
@@ -131,4 +132,7 @@
 }
 footer-meny a:visited{  
   color:#CCC;
+}
+.copyright{  
+  font-size:.9rem;
 }

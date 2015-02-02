@@ -17,34 +17,38 @@
   </head>
     <%= javascript_include_tag 'vendor/jquery', 'vendor/fastclick', 'vendor/jquery.pjax' %>
   <body>
+  <%#mast head image  %>
   <div class="row">
-    <div class="small-10 small-centered">
+    <div class="small-12 small-centered">
       <div class="mast-head-wraper center">
-    <%= image_tag("mast_head.png") %>
+        <%= image_tag("mast_head.png") %>
     </div>
-
   </div>
 </div>
 
+<%#menu content  %>
   <div class="row">
-    <div class="small-10 small-centered">
-        <div class="menu-wrapper center">
+    <div class="small-12 small-centered">
+      <div class="menu-wrapper center">
           <%=partial 'layouts/menu'%>
-    </div>
   </div>
-  <div class="row">
-    <div class="small-10 small-centered">
+  </div>
+  </div>
+
+<%# this is the main window root is bases/index  %>
+
+<div class="row">
+    <div class="small-12 small-centered">
       <div class="main-wrapper center">
           <%= yield %>
     </div>
   </div>
 </div>
-
-</div>
-
 <div class="row">
-  <div class="small-10 footer-wrapper small-centered">
-    <%=partial 'layouts/footer' %>
+  <div class="small-12 footer-menu small-centered">
+    <div class="footer-wrapper center">
+        <%=partial 'layouts/footer' %>
+</div>
 </div>
 </div>
   </body>

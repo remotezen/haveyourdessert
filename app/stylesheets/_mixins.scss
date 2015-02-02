@@ -4,6 +4,7 @@
 @mixin standard-border{  
   border: solid 1px green;
   @include border-radius(.5em);
+  /* */ 
 }
 @mixin standard-spacing{  
   margin:2em;

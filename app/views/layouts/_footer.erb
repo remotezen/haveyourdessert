@@ -1,13 +1,15 @@
-<div class="small-3 columns copyright">
   &copy 2015 tuning-in 
-</div>
-<div class="small-7 columns footer-menu">
-  <%= link_to("about", url_for(:bases, :about)) %>
+  <strong>
+
+
+  <%= link_to("about", url_for(:bases, :about)) %> |
   <%= mail_to("hjoanne62@gmail.com","contact",
               { subject:"Contact from tuning-in",
                 cc:"remotezen@bell.net"
-              }) %>
-</div>
+              }) %> |
+  <%= link_to "Home", url('/') %> |
+  <%= link_to "privacy", url('privacy') %>          
+</strong>
 <% if false %>
   stylesheet bases
 <% end %>

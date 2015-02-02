@@ -1,15 +1,18 @@
-<div class="small-4 columns">
+<% if false %>
+  post.scss stylesheet
+<% end %>
   <span class="counter">
    <%= post_counter  %>.
-    <%= link_to "#{post.title }", url_for(:posts, :show, id:post.permalink) %>
-
- </span>
-</div>
-<div class="small-4 columns centered">
-  <span class="search-body">
-    <%= truncate_words("#{post.body }", length:4) %>
 </span>
-</div>
-<div class="small-4 columns centered">
-  <%= time_split(post.created_at) %>
-</div>
+<span class="search-header">
+    <%= link_to "#{post.title }", url_for(:posts, :show, id:post.permalink) %>
+ </span>
+    <br>
+    <span class="search-body">
+      <%= truncate_words("#{post.body }", length:20) %>
+  </span>
+  <br>
+  <span class="search-date">
+    <%= time_split(post.created_at) %>
+</span>
+    

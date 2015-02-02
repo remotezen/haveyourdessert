@@ -20,6 +20,7 @@ Blog::App.controllers :privacy do
   # end
   
   get :index do
+    render 'shared/privacy'
 
   end
 
