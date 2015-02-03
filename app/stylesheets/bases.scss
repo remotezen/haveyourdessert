@@ -67,7 +67,7 @@
 
 }
 .comment-form{  
-  margin-top:5em;
+  margin-top:1em;
 }
 .comment-count{  
   opacity:.8;
@@ -92,6 +92,9 @@
   color:#eee;
   margin-right:1px;
   border:1px solid white;
+     -moz-border-radius: 0 1em 1em 0;
+      -ms-border-radius: 0 1em 1em 0;
+          border-radius: 0 1em 1em 0;
 }
 .search-form input[type=text]{  
   background:$grey-charcoal;
@@ -130,7 +133,7 @@
   color:blue;
 
 }
-footer-meny a:visited{  
+footer-menu a:visited{  
   color:#CCC;
 }
 .copyright{  

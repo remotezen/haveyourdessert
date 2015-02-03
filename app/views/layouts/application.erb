@@ -12,12 +12,15 @@
     <%= favicon_tag "favicon.ico" %>
     <link type="text/css" rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" />
     <link href='http://fonts.googleapis.com/css?family=Varela' rel=stylesheet />
-    <%= stylesheet_link_tag 'application', 'post', 'bases', 'comment'%>
+    <%= stylesheet_link_tag 'application', 'post', 'bases', 'comment', 'mobile'%>
     <%= javascript_include_tag 'vendor/modernizr' %>
   </head>
     <%= javascript_include_tag 'vendor/jquery', 'vendor/fastclick', 'vendor/jquery.pjax' %>
   <body>
   <%#mast head image  %>
+  <% if false %>
+    style sheet is app/stylesheets/application
+  <% end %>
   <div class="row">
     <div class="small-12 small-centered">
       <div class="mast-head-wraper center">
@@ -36,6 +39,9 @@
   </div>
 
 <%# this is the main window root is bases/index  %>
+<% if false %>
+  app/stylesheet/bases
+<% end %>
 
 <div class="row">
     <div class="small-12 small-centered">
