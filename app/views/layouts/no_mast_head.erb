@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
   <head>
@@ -21,23 +22,6 @@
   <% if false %>
     style sheet is app/stylesheets/application
   <% end %>
-  <div class="row">
-    <div class="small-12 small-centered">
-      <div class="mast-head-wraper center">
-        <%= image_tag("mast_head.png") %>
-    </div>
-  </div>
-</div>
-
-<%#menu content  %>
-  <div class="row">
-    <div class="small-12 small-centered">
-      <div class="menu-wrapper center">
-          <%=partial 'layouts/menu'%>
-  </div>
-  </div>
-  </div>
-
 <%# this is the main window root is bases/index  %>
 <% if false %>
   app/stylesheet/bases
@@ -49,13 +33,6 @@
           <%= yield %>
     </div>
   </div>
-</div>
-<div class="row">
-  <div class="small-12 footer-menu small-centered">
-    <div class="footer-wrapper center">
-        <%=partial 'layouts/footer' %>
-</div>
-</div>
 </div>
   </body>
 </html>

@@ -1,15 +1,23 @@
-<ul class="small-block-grid-2 index-container">
+
+<div class="row">
+<div class="small-12 small-centered center archive-image" >
+  <%=image_tag "purple_flower.png" %>
+</div>
+</div>
+
+<div class="row">
+  <div class="small-12 small-centered center">
   <% @posts.each do |post| %>
-  <li class="index-list">
+  <p class="archive-container">
       <%= link_to(post.title,"posts/show/#{post.permalink}") %>
-  </li>
-  <li class="index-list">
-      <%= truncate_words(post.body, length:8) %>
-  
-  </li>
-
-
+      <%= truncate_words(post.body, length:16) %>
+      <br>
+      <span class="created-at center">
+        <%=time_split(post.created_at) %>
+    </span>
+      </p>
     
   <%end%>
-</ul>
+</div>
+</div>
 

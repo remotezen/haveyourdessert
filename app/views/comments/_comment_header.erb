@@ -1,11 +1,12 @@
-<div class="comment-count center">
-  Comments as of
-  <%=time_split Time.now%> 
-  <br>
+<% if false %>
+  ###app/stylesheets/bases
+<% end %>
+<div class = "center">
   <span>
-    <strong>
+    <h3>
     <%= pluralize(comment_header.comments.count, "comment") %>
-  </strong>
+  </h3>
+  <%= time_split(Time.now) %>
   </span>
   <br>
   <span class="post-link">

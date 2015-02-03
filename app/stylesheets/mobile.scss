@@ -20,8 +20,7 @@
     }
     .user-comment{  
       font-size:.8rem;
-      padding:2px;
-      margin:0;
+      margin:1px;
     }
     .time-ago{  
       font-size:.6em;
@@ -47,7 +46,7 @@
     img.ri { max-height: 60%; }
   }
   .footer-wrapper a{  
-    font-size:.6em;
+    font-size:.7rem;
   }
   .footer-wrapper { font-size:.6rem;}
 
@@ -66,7 +65,35 @@
     left:-1rem;
   }
   .comment-count{  
+    
     font-size:.7em;
+  }
+
+/* Form here down goes in application to */ 
+  .archive-container{  
+    font-size:.8em;
+    padding:4px;
+    background:#EEE;
+    @include border-radius(8px);
+  }
+  .created-at{  
+    text-align:center;
+    margin-top:1rem;
+    font-size: .6rem;
+    background:#efe;
+    padding:4px 8px 4px 4px;
+  }
+  .button{  
+    background:$coral;
+  }
+  .time-ago-now{  
+    background:#eff;
+    font:.7rem italic verdana;
+    padding:4px;
+    opacity:.5;
+  }
+  .archive-image{  
+    margin-bottom:1rem;
   }
 
 }
