@@ -9,7 +9,7 @@
     <%= link_to "Log out", url_for(:sessions, :destroy) %>
   </i>|
   <%=link_to "<i class=fi-rss></i>".html_safe, url('posts.rss')%>
-  
+  <%=link_to "| profile", url_for(:users,:edit, id:current_user)%>
   <% else %>
     <i class="fi-pencil">
       <%= link_to "Sign up", url_for(:users, :new) %> 

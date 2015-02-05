@@ -20,6 +20,7 @@ Blog::App.controllers :bases do
   # end
   
   get :index do
+    
     @post = Post.last
     render 'bases/index' 
 

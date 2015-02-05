@@ -1,3 +1,5 @@
+<%content_for(:odd){ image_tag('purple_lotus.png') }%>
+<% content_for(:even){ image_tag('four-rocks.png') } %>
 
 <div class="row">
 <div class="small-12 small-centered center archive-image" >
@@ -8,17 +10,20 @@
 <div class="row">
   <div class="small-12 small-centered center">
   <% @posts.each do |post| %>
-  <p class="archive-container">
-  <%=image_tag("purple_lotus.png") %>
-      <%= link_to(post.title,"posts/show/#{post.permalink}") %>
+    <p class="<%=cycle%>">
+    <%=link_to(post.title,"posts/show/#{post.permalink}") %>
    <br>
       <%= truncate_words(post.body, length:16) %>
       <br>
       <span class="created-at center">
         <%=post_date(post) %>
     </span>
-    <br>
-  <%=image_tag("four-rocks.png") %>
+    <% if false %>
+      below is located
+      located in application.scss
+    <% end %>
+    <br><br>
+      <%=image_tag("four-rocks.png") %>
       </p>
     
   <%end%>

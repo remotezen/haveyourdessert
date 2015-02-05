@@ -23,13 +23,19 @@ module Blog
       
       def log_out
         session[:user_id] = nil
+        session[:since] = nil
       end
       
       def log_in(user)
         session[:user_id] = user.id
+        session[:since] = Time.now 
+        
       end
       def current_user_id
         session[:user_id]
+      end
+      def since
+        session[:since].to_s
       end
 
       def is_admin?(user)

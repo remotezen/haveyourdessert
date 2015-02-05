@@ -4,6 +4,7 @@ module Blog
     use ConnectionPoolManagement
     register Padrino::Mailer
     register Padrino::Helpers
+    register Padrino::Flash
     register CompassInitializer
     enable :sessions
 

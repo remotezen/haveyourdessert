@@ -6,6 +6,17 @@
   @include border-radius(.5em);
   /* */ 
 }
+
+@mixin archive-container{  
+    padding:1em;
+    background:#EEE;
+    @include border-radius(8px);
+}
+@mixin archive-container{  
+    padding:1em;
+    background:#EEE;
+    @include border-radius(8px);
+}
 @mixin standard-spacing{  
   margin:2em;
   padding:1.5em;

@@ -65,7 +65,6 @@ body{ background: #000; }
   .archive-container{  
     font-size:.8em;
     padding:4px;
-    background:#EEE;
     @include border-radius(8px);
   }
   .created-at{  
@@ -86,6 +85,17 @@ body{ background: #000; }
   }
   .archive-image{  
     margin-bottom:1rem;
+  }
+  .even{  
+    @include archive-container;
+    background:#ddd;
+  }
+  .odd{  
+    @include archive-container;
+    background:#eee;
+  }
+  .post-archive-footer-image{  
+    margin-top:1em;
   }
 
 
