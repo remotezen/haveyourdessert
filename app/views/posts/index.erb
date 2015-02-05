@@ -1,7 +1,7 @@
 
 <div class="row">
 <div class="small-12 small-centered center archive-image" >
-  <%=image_tag "purple_flower.png" %>
+  <%=link_to image_tag("purple_flower.png"), url('/') %>
 </div>
 </div>
 
@@ -9,12 +9,16 @@
   <div class="small-12 small-centered center">
   <% @posts.each do |post| %>
   <p class="archive-container">
+  <%=image_tag("purple_lotus.png") %>
       <%= link_to(post.title,"posts/show/#{post.permalink}") %>
+   <br>
       <%= truncate_words(post.body, length:16) %>
       <br>
       <span class="created-at center">
-        <%=time_split(post.created_at) %>
+        <%=post_date(post) %>
     </span>
+    <br>
+  <%=image_tag("four-rocks.png") %>
       </p>
     
   <%end%>

@@ -22,7 +22,7 @@ Blog::App.controllers :posts do
 
   get :index, provides: [:html, :rss, :atom] do
     @posts = Post.order(created_at: :desc)
-    render 'posts/index', :layout => 'no_mast_head.erb'
+    render 'posts/index', layout: 'no_mast_head.erb'
   end
   
   get :show, :with => :id do
