@@ -1,28 +1,26 @@
 <div class="row display">
   <div class="small-6 columns  top-links">
-  <i class="fi-home"><%=link_to('Home',url('/')) %></i> |
-  <i class="fi-archive"><%=link_to('Archive', url_for(:posts, :index)) %></i> |
-
- 
+  <%=link_to "<i class=fi-home></i>".html_safe, url('/')%>
+  &nbsp
+  <%=link_to "<i class=fi-archive></i>".html_safe, url_for(:posts, :index) ,
+    title:"home page"%>
+  &nbsp
   <% if current_user %>
-  <i class="fi-minus-circle">
-    <%= link_to "Log out", url_for(:sessions, :destroy) %>
-  </i>|
+  <%=link_to "<i class=fi-minus-circle></i>".html_safe, url_for(:sessions, :destroy)%>
+  &nbsp
   <%=link_to "<i class=fi-rss></i>".html_safe, url('posts.rss')%>
-  <%=link_to "| profile", url_for(:users,:edit, id:current_user)%>
+  &nbsp
+      <%=link_to "<i class=fi-torso></i>".html_safe, url_for(:users,:edit, id:current_user)%>
   <% else %>
-    <i class="fi-pencil">
-      <%= link_to "Sign up", url_for(:users, :new) %> 
-    </i>|
-    <i class="fi-unlock">
-    <%= link_to "log in", url_for(:sessions, :new) %>
-  </i> |
+      <%=link_to "<i class=fi-pencil></i>".html_safe, url_for(:users,:new)%>
+  &nbsp
+      <%=link_to "<i class=fi-lock></i>".html_safe, url_for(:sessions,:new)%>
   <% end %>
   <% if false %>
 
   <%end%>
   <%if is_admin?(current_user)  %>
-    | <%= link_to "admin", url('/admin') %>
+  <%=link_to "<i class=fi-wrench></i>".html_safe, url('/admin')%>
   <%end%>
 </div>
   <%= partial '/layouts/search' %>

@@ -350,4 +350,14 @@ footer p {
     display: none;
   }
 }
+.login-logo{  
+  text-align:center;
+}
 /* -- End Application -- */
+h1.login-title{  
+  text-align:center;
+  color:#ddddff;
+  background:#eee;
+  padding:1em;
+  border:black dotted 1px;
+}

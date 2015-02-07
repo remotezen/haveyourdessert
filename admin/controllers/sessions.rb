@@ -1,5 +1,6 @@
 Blog::Admin.controllers :sessions do
   get :new do
+    @title= "Tuning in"
     render "/sessions/new", nil, :layout => false
   end
 

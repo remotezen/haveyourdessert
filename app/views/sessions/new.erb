@@ -1,4 +1,5 @@
 <h1>Log in</h1>
+<span class="sessions-new">
 
 <%form_tag url_for(:sessions,:create), method:'post' do %>
   <p>
@@ -13,4 +14,6 @@
   <%= submit_tag "Log in", class: "button radius" %>
   </p>
 <% end %>
+</span>
+
 

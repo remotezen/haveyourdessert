@@ -1,6 +1,8 @@
 <h1>Sign Up</h1>
-<% form_for @user, url_for(:users, :create) do |f| %>
-  <%=partial 'shared/user_form', :object => @user, :locals => {:f => f, } %>
+<span class="users-new"
+  <% form_for @user, url_for(:users, :create) do |f| %>
+    <%=partial 'shared/user_form', :object => @user, :locals => {:f => f, } %>
 
-<% end %>
+  <% end %>
+></span>
 

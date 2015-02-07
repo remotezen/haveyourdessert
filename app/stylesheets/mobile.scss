@@ -4,7 +4,6 @@
 
 @media( max-width: 360px){ 
     .menu-wrapper{  
-      font-size:.5rem;
     }
 
     .main-wrapper p.body-wrapper{  
@@ -99,6 +98,15 @@
   .search-header a{  
     color: $archive-link;
   }
+  .top-links{  
+  }
+  .top-links a:hover{ color: white; }
 
+}
+.top-links a[title]:hover:after{  
+  color:white;
+  background:black;
+  padding:.5em;
+  z-index: 1000;
 }
 /* special styling for phone ends */ 
