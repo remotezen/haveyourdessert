@@ -47,7 +47,13 @@ module Blog
           false
         end
       end
-
+      
+      def correct_user
+        user = User.find(params[:id])
+        unless user == current_user 
+          redirect_to('/')
+        end
+      end
 
     end
 

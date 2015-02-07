@@ -6,7 +6,7 @@
     title:"home page"%>
   &nbsp
   <% if current_user %>
-  <%=link_to "<i class=fi-minus-circle></i>".html_safe, url_for(:sessions, :destroy)%>
+  <%=link_to "<i class=fi-unlock></i>".html_safe, url_for(:sessions, :destroy)%>
   &nbsp
   <%=link_to "<i class=fi-rss></i>".html_safe, url('posts.rss')%>
   &nbsp

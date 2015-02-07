@@ -1,4 +1,8 @@
 Blog::App.controllers :users do
+  before :update do 
+    correct_user
+
+  end
   
   # get :index, :map => '/foo/bar' do
   #   session[:foo] = 'bar'
@@ -57,4 +61,14 @@ Blog::App.controllers :users do
     render '/users/edit'
   end
 end
+  delete :destroy, :map=>'/users/:id/destroy' do
+    @user = User.find(params[:id]).destroy
+    if @user
+      flash[:notice] = "#{@user.email } was successfully remove from our records"
+      redirect_to('/')
+    else
+
+      flash[:notice] = " we are unable to process your request at this time"
+      redirect_to('/')
+  end
 end

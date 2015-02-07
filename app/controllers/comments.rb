@@ -1,4 +1,11 @@
 Blog::App.controllers :comments do
+  before :create do
+    logged_in?
+    correct_user
+  end
+  before :new do
+    logged_in?
+  end
   
   # get :index, :map => '/foo/bar' do
   #   session[:foo] = 'bar'
