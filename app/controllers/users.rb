@@ -70,5 +70,6 @@ end
 
       flash[:notice] = " we are unable to process your request at this time"
       redirect_to('/')
+    end
   end
-end
+  end

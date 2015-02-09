@@ -88,11 +88,14 @@ body{ background: #000; }
   }
   .even{  
     @include archive-container;
-    background:#ddd;
+    background:#ccc;
+    color: $grey-charcoal;
+    border:1px solid $grey-charcoal
   }
   .odd{  
     @include archive-container;
     background:#eee;
+    border:1px solid $grey-charcoal
   }
   .post-archive-footer-image{  
     margin-top:1em;
@@ -129,6 +132,9 @@ body{ background: #000; }
     margin: 5px 1px 3px 0px;
     border: 1px solid rgba(240,128,128, 1);
   }
+}
+.comment-image-container{  
+  text-align:center;
 }
 
 

@@ -28,7 +28,7 @@ module Blog
       
       def log_in(user)
         session[:user_id] = user.id
-        session[:since] = Time.now 
+        session[:since] = Time.now.to_s
         
       end
       def current_user_id

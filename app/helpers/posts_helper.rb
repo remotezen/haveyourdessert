@@ -11,11 +11,24 @@ module Blog
           real_title = "Tuning in and having the time of your life"
         end
       end
+      def image_cycle(* args)
+
+        @_image_cycle ||= reset_image(args)
+        @_image_cycle = [@_image_cycle.pop] + @_image_cycle
+        @_image_cycle.first.to_s
+      end
     def cycle
       @_cycle ||= reset_cycle
       @_cycle = [@_cycle.pop] + @_cycle
       @_cycle.first
     end
+    
+    def reset_image(args)
+      args.reverse.each do |i|
+      @_image_cycle = [i] 
+      end
+    end
+    
     def reset_cycle
     @_cycle = %w(even odd)
     end

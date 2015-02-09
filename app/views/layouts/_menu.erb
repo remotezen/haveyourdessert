@@ -3,24 +3,20 @@
   <%=link_to "<i class=fi-home></i>".html_safe, url('/')%>
   &nbsp
   <%=link_to "<i class=fi-archive></i>".html_safe, url_for(:posts, :index) ,
-    title:"home page"%>
+    title:"Past Posts"%>
   &nbsp
   <% if current_user %>
-  <%=link_to "<i class=fi-unlock></i>".html_safe, url_for(:sessions, :destroy)%>
-  &nbsp
-  <%=link_to "<i class=fi-rss></i>".html_safe, url('posts.rss')%>
-  &nbsp
-      <%=link_to "<i class=fi-torso></i>".html_safe, url_for(:users,:edit, id:current_user)%>
+    <%= partial "layouts/logged_in" %>
   <% else %>
-      <%=link_to "<i class=fi-pencil></i>".html_safe, url_for(:users,:new)%>
+      <%=link_to "<i class=fi-pencil></i>".html_safe, url_for(:users,:new), title:"Signup"%>
   &nbsp
-      <%=link_to "<i class=fi-lock></i>".html_safe, url_for(:sessions,:new)%>
+      <%=link_to "<i class=fi-lock></i>".html_safe, url_for(:sessions,:new), title:"Logout"%>
   <% end %>
   <% if false %>
 
   <%end%>
   <%if is_admin?(current_user)  %>
-  <%=link_to "<i class=fi-wrench></i>".html_safe, url('/admin')%>
+  <%=link_to "<i class=fi-wrench></i>".html_safe, url('/admin'), title:"Administraion"%>
   <%end%>
 </div>
   <%= partial '/layouts/search' %>
