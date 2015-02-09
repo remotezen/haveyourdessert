@@ -26,7 +26,10 @@ Blog::App.controllers :sessions do
   
   post :create do
     user = User.authenticate(params[:email], params[:password])
-    if user
+    hash = { user_id: current_user,
+             address:  request.ip}
+    session = Session.new(hash)
+    if user and session.save
       session[:user_id] = user.id
       flash[:notice] = "Logged in"
       redirect url('/')

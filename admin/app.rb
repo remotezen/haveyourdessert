@@ -33,6 +33,8 @@ module Blog
     end
 
     access_control.roles_for :admin do |role|
+      role.project_module :recipes, '/recipes'
+      role.project_module :steps, '/steps'
       role.project_module :users, '/users'
       role.project_module :posts, '/posts'
       role.project_module :accounts, '/accounts'

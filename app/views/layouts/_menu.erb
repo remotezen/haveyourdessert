@@ -12,9 +12,6 @@
   &nbsp
       <%=link_to "<i class=fi-lock></i>".html_safe, url_for(:sessions,:new), title:"Logout"%>
   <% end %>
-  <% if false %>
-
-  <%end%>
   <%if is_admin?(current_user)  %>
   <%=link_to "<i class=fi-wrench></i>".html_safe, url('/admin'), title:"Administraion"%>
   <%end%>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 11) do
+ActiveRecord::Schema.define(version: 13) do
 
   create_table "accounts", force: :cascade do |t|
     t.string   "name"
@@ -43,10 +43,29 @@ ActiveRecord::Schema.define(version: 11) do
     t.integer  "comment_id"
   end
 
+  create_table "recipes", force: :cascade do |t|
+    t.integer  "post_id"
+    t.text     "ingredients"
+    t.string   "image"
+    t.string   "title"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "sessions", force: :cascade do |t|
     t.integer  "user_id"
     t.datetime "time_out"
     t.string   "address"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "steps", force: :cascade do |t|
+    t.integer  "post_id"
+    t.text     "step"
+    t.string   "image"
+    t.string   "title"
+    t.integer  "recipe_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
