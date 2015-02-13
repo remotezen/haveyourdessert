@@ -14,9 +14,13 @@ Blog::Admin.controllers :steps do
   post :create do
     @step = Step.new(params[:step])
     if @step.save
+      upload = Upload.new
+      upload.file = params[:step][:image]
+      upload.save
       @title = pat(:create_title, :model => "step #{@step.id}")
       flash[:success] = pat(:create_success, :model => 'Step')
-      params[:save_and_continue] ? redirect(url(:steps, :index)) : redirect(url(:steps, :edit, :id => @step.id))
+      params[:save_and_continue] ? redirect(url(:steps, :new)) : redirect(url(:steps, :edit, :id => @step.id))
+
     else
       @title = pat(:create_title, :model => 'step')
       flash.now[:error] = pat(:create_error, :model => 'step')
@@ -40,9 +44,14 @@ Blog::Admin.controllers :steps do
     @step = Step.find(params[:id])
     if @step
       if @step.update_attributes(params[:step])
+
+      upload = Upload.new
+      upload.file = params[:step][:image]
+      upload.save
+        
         flash[:success] = pat(:update_success, :model => 'Step', :id =>  "#{params[:id]}")
         params[:save_and_continue] ?
-          redirect(url(:steps, :index)) :
+          redirect(url(:steps, :new)) :
           redirect(url(:steps, :edit, :id => @step.id))
       else
         flash.now[:error] = pat(:update_error, :model => 'step')

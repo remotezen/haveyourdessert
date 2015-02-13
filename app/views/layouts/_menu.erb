@@ -5,7 +5,7 @@
   <%=link_to "<i class=fi-archive></i>".html_safe, url_for(:posts, :index) ,
     title:"Past Posts"%>
   &nbsp
-  <% if current_user %>
+  <% if logged_in? %>
     <%= partial "layouts/logged_in" %>
   <% else %>
       <%=link_to "<i class=fi-pencil></i>".html_safe, url_for(:users,:new), title:"Signup"%>

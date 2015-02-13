@@ -14,9 +14,12 @@ Blog::Admin.controllers :recipes do
   post :create do
     @recipe = Recipe.new(params[:recipe])
     if @recipe.save
+      upload = Upload.new
+      upload.file = params[:recipe][:image]
+      upload.save
       @title = pat(:create_title, :model => "recipe #{@recipe.id}")
       flash[:success] = pat(:create_success, :model => 'Recipe')
-      params[:save_and_continue] ? redirect(url(:recipes, :index)) : redirect(url(:recipes, :edit, :id => @recipe.id))
+      params[:save_and_continue] ? redirect(url(:steps, :new)) : redirect(url(:recipes, :edit, :id => @recipe.id))
     else
       @title = pat(:create_title, :model => 'recipe')
       flash.now[:error] = pat(:create_error, :model => 'recipe')
@@ -40,6 +43,9 @@ Blog::Admin.controllers :recipes do
     @recipe = Recipe.find(params[:id])
     if @recipe
       if @recipe.update_attributes(params[:recipe])
+        upload = Upload.new
+        upload.file = params[:recipe][:image]
+        upload.save
         flash[:success] = pat(:update_success, :model => 'Recipe', :id =>  "#{params[:id]}")
         params[:save_and_continue] ?
           redirect(url(:recipes, :index)) :

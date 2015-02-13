@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 13) do
+ActiveRecord::Schema.define(version: 14) do
 
   create_table "accounts", force: :cascade do |t|
     t.string   "name"
@@ -31,6 +31,27 @@ ActiveRecord::Schema.define(version: 13) do
     t.integer  "post_id"
   end
 
+  create_table "nutrients", force: :cascade do |t|
+    t.string   "name"
+    t.string   "group"
+    t.string   "calcium"
+    t.string   "sodium"
+    t.string   "fiber"
+    t.string   "vitamin_c"
+    t.string   "potassium"
+    t.string   "carbohydrate"
+    t.string   "sugars"
+    t.string   "fat"
+    t.string   "water"
+    t.string   "calories"
+    t.string   "saturated"
+    t.string   "monounsat"
+    t.string   "polyunsat"
+    t.integer  "item_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "posts", force: :cascade do |t|
     t.string   "title"
     t.text     "body"
@@ -48,14 +69,6 @@ ActiveRecord::Schema.define(version: 13) do
     t.text     "ingredients"
     t.string   "image"
     t.string   "title"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "sessions", force: :cascade do |t|
-    t.integer  "user_id"
-    t.datetime "time_out"
-    t.string   "address"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
