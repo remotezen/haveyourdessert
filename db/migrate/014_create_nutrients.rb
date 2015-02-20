@@ -1,8 +1,9 @@
 class CreateNutrients < ActiveRecord::Migration
   def self.up
-    create_table :nutrients do |t|
+    create_table :nutrients, id: false do |t|
       t.string :name
       t.string :group
+      t.string :protein
       t.string :calcium
       t.string :sodium
       t.string :fiber
@@ -16,9 +17,10 @@ class CreateNutrients < ActiveRecord::Migration
       t.string :saturated
       t.string :monounsat
       t.string :polyunsat
-      t.integer :item_id
-      t.timestamps
+      t.integer :product_id
     end
+
+    add_index :nutrients, :product_id, unique: true
   end
 
   def self.down

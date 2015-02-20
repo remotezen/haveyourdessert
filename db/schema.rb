@@ -31,26 +31,27 @@ ActiveRecord::Schema.define(version: 14) do
     t.integer  "post_id"
   end
 
-  create_table "nutrients", force: :cascade do |t|
-    t.string   "name"
-    t.string   "group"
-    t.string   "calcium"
-    t.string   "sodium"
-    t.string   "fiber"
-    t.string   "vitamin_c"
-    t.string   "potassium"
-    t.string   "carbohydrate"
-    t.string   "sugars"
-    t.string   "fat"
-    t.string   "water"
-    t.string   "calories"
-    t.string   "saturated"
-    t.string   "monounsat"
-    t.string   "polyunsat"
-    t.integer  "item_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+  create_table "nutrients", id: false, force: :cascade do |t|
+    t.string  "name"
+    t.string  "group"
+    t.string  "protein"
+    t.string  "calcium"
+    t.string  "sodium"
+    t.string  "fiber"
+    t.string  "vitamin_c"
+    t.string  "potassium"
+    t.string  "carbohydrate"
+    t.string  "sugars"
+    t.string  "fat"
+    t.string  "water"
+    t.string  "calories"
+    t.string  "saturated"
+    t.string  "monounsat"
+    t.string  "polyunsat"
+    t.integer "product_id"
   end
+
+  add_index "nutrients", ["product_id"], name: "index_nutrients_on_product_id", unique: true
 
   create_table "posts", force: :cascade do |t|
     t.string   "title"
