@@ -83,12 +83,12 @@
 }
 .search-form{  
   position:relative;
-  float:right;
+  float:left;
 }
 
 
 .search-form input[type=submit]{  
-  background:$coral;
+  background:$pink;
   color:#eee;
   margin-right:1px;
   border:1px solid white;
@@ -106,16 +106,16 @@
           border-radius: 0 1em 1em 0;
 }
 .top-links{  
-  color:$coral;
-  font-size:1.1em;
+  color:$pink;
+  font-size:1.8em;
 }
 .top-links a{  
-  color:$coral;
+  color:$pink;
 }
 
 .search-form{ float:right; }
 .footer-wrapper{  
-  background:$coral;
+  background:$pink;
   min-height:2em;
 }
 .footer-wrapper{  

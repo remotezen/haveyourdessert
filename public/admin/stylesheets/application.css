@@ -5,6 +5,7 @@ html, body {
 body {
   font-size: 13px;
 }
+.index-box{ text-align:center; }
 .main {
   min-height: 100%;
   height: auto !important;
@@ -35,7 +36,7 @@ footer {
 }
 footer p {
   margin-bottom: 0;
-  color: #777;
+  color: #ff00a1;
 }
 .footer-links li {
   display: inline-block;
@@ -269,6 +270,9 @@ footer p {
 /* ---- Begin Application::List::ActionsOnList ---- */
 .list-menu {
   text-align: left;
+}
+.navbar-inner a{  
+  color:#ff00a1;
 }
 .list-menu-toggle, .list-menu-toggle:hover {
   outline: none;

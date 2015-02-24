@@ -51,7 +51,7 @@
   .footer-wrapper { font-size:.6rem;}
 
   .search-form input[type=submit]{  
-    background:$coral;
+    background:$pink;
     color:#eee;
     margin-right:1px;
     height:25px;
@@ -84,7 +84,7 @@
     padding:4px 8px 4px 4px;
   }
   .button{  
-    background:$coral;
+    background:$pink;
   }
   .time-ago-now{  
     background:#eff;
@@ -99,6 +99,10 @@
     color: $archive-link;
   }
   .top-links{  
+    font-size:.7em;
+  }
+  .top-links a{  
+    color:$pink;
   }
   .top-links a:hover{ color: white; }
 
