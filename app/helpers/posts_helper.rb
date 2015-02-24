@@ -6,9 +6,9 @@ module Blog
       def title(title = nil)
         unless title.blank?
           real_title =
-          "Tuning in | #{title }"  
+          "Have Your Dessert | #{title }"  
         else
-          real_title = "Tuning in and having the time of your life"
+          real_title = "Have Your Dessert"
         end
       end
       def image_cycle(* args)
