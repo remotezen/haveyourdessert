@@ -35,7 +35,6 @@ gem 'shoulda', :group => 'test'
 gem 'rack-test', :require => 'rack/test', :group => 'test'
 
 # Padrino Stable Gem
-gem 'unicorn'
 gem 'padrino-contrib'
 gem 'padrino-warden'
 gem 'bcrypt'
