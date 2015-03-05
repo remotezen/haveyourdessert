@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 14) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "accounts", force: :cascade do |t|
     t.string   "name"
     t.string   "surname"
@@ -51,7 +54,7 @@ ActiveRecord::Schema.define(version: 14) do
     t.integer "product_id"
   end
 
-  add_index "nutrients", ["product_id"], name: "index_nutrients_on_product_id", unique: true
+  add_index "nutrients", ["product_id"], name: "index_nutrients_on_product_id", unique: true, using: :btree
 
   create_table "posts", force: :cascade do |t|
     t.string   "title"

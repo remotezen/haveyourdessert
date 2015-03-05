@@ -29,6 +29,7 @@ gem 'sass'
 gem 'erubis', '~> 2.7.0'
 gem 'activerecord', '>= 3.1', :require => 'active_record'
 gem 'sqlite3'
+gem 'pg'
 
 # Test requirements
 gem 'shoulda', :group => 'test'
