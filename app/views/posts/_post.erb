@@ -1,0 +1,18 @@
+<% if false %>
+  post.scss stylesheet
+<% end %>
+  <span class="counter">
+   <%= post_counter  %>.
+</span>
+<span class="search-header">
+    <%= link_to "#{post.title }", url_for(:posts, :show, id:post.permalink) %>
+ </span>
+    <br>
+    <span class="search-body">
+      <%= truncate_words("#{post.body }", length:20) %>
+  </span>
+  <br>
+  <span class="search-date">
+    <%= time_split(post.created_at) %>
+</span>
+    

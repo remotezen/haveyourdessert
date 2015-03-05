@@ -1,0 +1,32 @@
+<%content_for(:odd){ image_tag('purple_lotus.png') }%>
+<% content_for(:even){ image_tag('four-rocks.png') } %>
+
+<div class="row">
+<div class="small-12 small-centered center archive-image" >
+  <%=link_to image_tag("have_your_dessert.svg"), url('/')%>
+</div>
+</div>
+
+<div class="row">
+  <div class="small-12 small-centered center">
+  <% @posts.each do |post| %>
+    <p class="<%=cycle%>">
+    <%=link_to(post.title,"posts/show/#{post.permalink}") %>
+   <br>
+      <%= truncate_words(post.body, length:16) %>
+      <br>
+      <span class="created-at center">
+        <%=post_date(post) %>
+    </span>
+    <% if false %>
+      below is located
+      located in application.scss
+    <% end %>
+    <br><br>
+      <%=image_tag(image_cycle("circle.png","four-rocks.png", "purple_lotus.png","crane.png")) %>
+      </p>
+    
+  <%end%>
+</div>
+</div>
+

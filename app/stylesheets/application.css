@@ -1,0 +1,91 @@
+/*
+Error: File to import not found or unreadable: normalize.
+       Load paths:
+         Compass::SpriteImporter
+         /home/grit/Programming/Ruby/Padrino/Projects/blog/app/stylesheets
+         /home/grit/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets
+        on line 1 of /home/grit/Programming/Ruby/Padrino/Projects/blog/app/stylesheets/application.scss
+
+1: @import "normalize";
+2: @import "foundation/settings";
+3: @import "foundation";
+
+Backtrace:
+/home/grit/Programming/Ruby/Padrino/Projects/blog/app/stylesheets/application.scss:1
+/home/grit/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/sass-3.4.10/lib/sass/tree/import_node.rb:66:in `rescue in import'
+/home/grit/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/sass-3.4.10/lib/sass/tree/import_node.rb:45:in `import'
+/home/grit/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/sass-3.4.10/lib/sass/tree/import_node.rb:28:in `imported_file'
+/home/grit/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/sass-3.4.10/lib/sass/tree/import_node.rb:37:in `css_import?'
+/home/grit/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/sass-3.4.10/lib/sass/tree/visitors/perform.rb:311:in `visit_import'
+/home/grit/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/sass-3.4.10/lib/sass/tree/visitors/base.rb:36:in `visit'
+/home/grit/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/sass-3.4.10/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/home/grit/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/sass-3.4.10/lib/sass/stack.rb:79:in `block in with_base'
+/home/grit/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/sass-3.4.10/lib/sass/stack.rb:115:in `with_frame'
+/home/grit/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/sass-3.4.10/lib/sass/stack.rb:79:in `with_base'
+/home/grit/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/sass-3.4.10/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/home/grit/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/sass-3.4.10/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/home/grit/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/sass-3.4.10/lib/sass/tree/visitors/base.rb:52:in `map'
+/home/grit/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/sass-3.4.10/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/home/grit/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/sass-3.4.10/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+/home/grit/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/sass-3.4.10/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/home/grit/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/sass-3.4.10/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+/home/grit/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/sass-3.4.10/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/home/grit/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/sass-3.4.10/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+/home/grit/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/sass-3.4.10/lib/sass/tree/visitors/base.rb:36:in `visit'
+/home/grit/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/sass-3.4.10/lib/sass/tree/visitors/perform.rb:157:in `visit'
+/home/grit/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/sass-3.4.10/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/home/grit/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/sass-3.4.10/lib/sass/tree/root_node.rb:36:in `css_tree'
+/home/grit/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/sass-3.4.10/lib/sass/tree/root_node.rb:20:in `render'
+/home/grit/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/sass-3.4.10/lib/sass/engine.rb:268:in `render'
+/home/grit/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/sass-3.4.10/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
+/home/grit/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/sass-3.4.10/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/home/grit/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/sass-3.4.10/lib/sass/plugin/compiler.rb:209:in `each'
+/home/grit/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/sass-3.4.10/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/home/grit/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/sass-3.4.10/lib/sass/plugin.rb:82:in `update_stylesheets'
+/home/grit/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/sass-3.4.10/lib/sass/plugin.rb:54:in `check_for_updates'
+/home/grit/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/sass-3.4.10/lib/sass/plugin/rack.rb:51:in `call'
+/home/grit/Programming/Ruby/Padrino/Projects/blog/lib/connection_pool_management_middleware.rb:7:in `block in call'
+/home/grit/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/activerecord-4.2.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:292:in `with_connection'
+/home/grit/Programming/Ruby/Padrino/Projects/blog/lib/connection_pool_management_middleware.rb:7:in `call'
+/home/grit/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/sass-3.4.10/lib/sass/plugin/rack.rb:54:in `call'
+/home/grit/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/rack-protection-1.5.3/lib/rack/protection/base.rb:49:in `call'
+/home/grit/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/rack-protection-1.5.3/lib/rack/protection/xss_header.rb:18:in `call'
+/home/grit/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/rack-protection-1.5.3/lib/rack/protection/base.rb:49:in `call'
+/home/grit/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/rack-protection-1.5.3/lib/rack/protection/base.rb:49:in `call'
+/home/grit/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/rack-protection-1.5.3/lib/rack/protection/json_csrf.rb:18:in `call'
+/home/grit/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/rack-protection-1.5.3/lib/rack/protection/base.rb:49:in `call'
+/home/grit/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/rack-protection-1.5.3/lib/rack/protection/base.rb:49:in `call'
+/home/grit/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/rack-protection-1.5.3/lib/rack/protection/frame_options.rb:31:in `call'
+/home/grit/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/rack-1.6.0/lib/rack/head.rb:13:in `call'
+/home/grit/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/rack-1.6.0/lib/rack/methodoverride.rb:22:in `call'
+/home/grit/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/padrino-core-0.12.4/lib/padrino-core/reloader/rack.rb:22:in `call'
+/home/grit/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/padrino-core-0.12.4/lib/padrino-core/logger.rb:420:in `call'
+/home/grit/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/bundler/gems/sinatra-62c4456bc735/lib/sinatra/show_exceptions.rb:21:in `call'
+/home/grit/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/rack-1.6.0/lib/rack/session/abstract/id.rb:225:in `context'
+/home/grit/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/rack-1.6.0/lib/rack/session/abstract/id.rb:220:in `call'
+/home/grit/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/bundler/gems/sinatra-62c4456bc735/lib/sinatra/base.rb:2021:in `call'
+/home/grit/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/bundler/gems/sinatra-62c4456bc735/lib/sinatra/base.rb:1486:in `block in call'
+/home/grit/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/bundler/gems/sinatra-62c4456bc735/lib/sinatra/base.rb:1795:in `synchronize'
+/home/grit/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/bundler/gems/sinatra-62c4456bc735/lib/sinatra/base.rb:1486:in `call'
+/home/grit/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/padrino-core-0.12.4/lib/padrino-core/router.rb:84:in `block in call'
+/home/grit/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/padrino-core-0.12.4/lib/padrino-core/router.rb:75:in `each'
+/home/grit/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/padrino-core-0.12.4/lib/padrino-core/router.rb:75:in `call'
+/home/grit/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/rack-1.6.0/lib/rack/lint.rb:49:in `_call'
+/home/grit/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/rack-1.6.0/lib/rack/lint.rb:37:in `call'
+/home/grit/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/rack-1.6.0/lib/rack/showexceptions.rb:24:in `call'
+/home/grit/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/rack-1.6.0/lib/rack/commonlogger.rb:33:in `call'
+/home/grit/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/bundler/gems/sinatra-62c4456bc735/lib/sinatra/base.rb:218:in `call'
+/home/grit/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/rack-1.6.0/lib/rack/chunked.rb:54:in `call'
+/home/grit/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/rack-1.6.0/lib/rack/content_length.rb:15:in `call'
+/home/grit/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/unicorn-4.8.3/lib/unicorn/http_server.rb:576:in `process_client'
+/home/grit/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/unicorn-4.8.3/lib/unicorn/http_server.rb:670:in `worker_loop'
+/home/grit/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/unicorn-4.8.3/lib/unicorn/http_server.rb:525:in `spawn_missing_workers'
+/home/grit/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/unicorn-4.8.3/lib/unicorn/http_server.rb:140:in `start'
+/home/grit/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/unicorn-4.8.3/bin/unicorn:126:in `<top (required)>'
+/home/grit/.rbenv/versions/2.1.5/bin/unicorn:23:in `load'
+/home/grit/.rbenv/versions/2.1.5/bin/unicorn:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: File to import not found or unreadable: normalize.\A        Load paths:\A          Compass::SpriteImporter\A          /home/grit/Programming/Ruby/Padrino/Projects/blog/app/stylesheets\A          /home/grit/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets\A         on line 1 of /home/grit/Programming/Ruby/Padrino/Projects/blog/app/stylesheets/application.scss\A \A 1: @import \"normalize\";\A 2: @import \"foundation/settings\";\A 3: @import \"foundation\";"; }

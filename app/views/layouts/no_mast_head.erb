@@ -1,0 +1,46 @@
+
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <meta name=viewport content='width=device-width,initial-scale=1' />
+    <title><%= title(@title) %></title>
+    <%= favicon_tag "favicon.ico" %>
+    <link type="text/css" rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" />
+    <link href='http://fonts.googleapis.com/css?family=Varela' rel=stylesheet />
+    <%= stylesheet_link_tag 'application', 'post', 'bases', 'comment', 'mobile'%>
+    <%= javascript_include_tag 'vendor/modernizr' %>
+    <%= javascript_include_tag 'vendor/jquery', 'vendor/fastclick', 'vendor/jquery.pjax' %>
+  </head>
+  <body>
+  <%#mast head image  %>
+  <% if false %>
+    style sheet is app/stylesheets/application
+  <% end %>
+<%# this is the main window root is bases/index  %>
+<% if false %>
+  app/stylesheet/bases
+<% end %>
+
+<div class="row">
+    <div class="small-12 small-centered">
+      <div class="main-wrapper center">
+          <%= yield %>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="small-12 footer-menu small-centered">
+    <div class="footer-wrapper center">
+        <%=partial 'layouts/footer' %>
+</div>
+</div>
+</div>
+  </body>
+</html>

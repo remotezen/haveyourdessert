@@ -1,0 +1,16 @@
+<% unless @posts.blank? %>
+<ul class="search-results">
+<div class="search-container">
+      <li><%= partial '/posts/post', collection:@posts  %></li>
+</div>
+</ul>
+<% else %>
+  <span class="no-results">
+    <h1>Your search term rendered no results</h1>
+  </span>
+<%end%>
+  <div class="small-12 center small-centered search-counter">
+    <%= pluralize(@posts.count, "result") %>
+</div>
+  
+</div>

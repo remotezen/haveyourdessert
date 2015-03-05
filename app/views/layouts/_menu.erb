@@ -1,0 +1,22 @@
+<div class="row display">
+  <div class="small-6 columns  top-links">
+  <%=link_to "<i class=fi-home></i>".html_safe, url('/')%>
+  &nbsp
+  <%=link_to "<i class=fi-archive></i>".html_safe, url_for(:posts, :index) ,
+    title:"Past Posts"%>
+  &nbsp
+  <% if logged_in? %>
+    <%= partial "layouts/logged_in" %>
+  <% else %>
+      <%=link_to "<i class=fi-pencil></i>".html_safe, url_for(:users,:new), title:"Signup"%>
+  &nbsp
+      <%=link_to "<i class=fi-lock></i>".html_safe, url_for(:sessions,:new), title:"Logout"%>
+  <% end %>
+  <%if is_admin?(current_user)  %>
+  <%=link_to "<i class=fi-wrench></i>".html_safe, url('/admin'), title:"Administraion"%>
+  <%end%>
+</div>
+  <%= partial '/layouts/search' %>
+</div>
+
+

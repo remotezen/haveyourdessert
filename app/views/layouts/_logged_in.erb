@@ -1,0 +1,5 @@
+  <%=link_to "<i class=fi-unlock></i>".html_safe, url_for(:sessions, :destroy), title:"Logout"%>
+  &nbsp
+  <%=link_to "<i class=fi-rss></i>".html_safe, url('posts.rss'), title: "News feed"%>
+  &nbsp
+  <%=link_to "<i class=fi-torso></i>".html_safe, url_for(:users,:edit, id:current_user), title:"Profile"%>

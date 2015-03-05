@@ -1,0 +1,140 @@
+@import "normalize";
+@import "foundation/settings";
+@import "foundation";
+@import "post";
+@import "navigation";
+@import "settings";
+@import "variables";
+@import "mixins";
+img{ max-width:100%; }
+
+
+body{ background: #fff; }
+.main-wrapper{ background:#fff; 
+  min-height:10em;
+  text-align:center;
+  margin-top:1em;
+}
+.center{ 
+  margin-left:auto;
+  margin-right:auto; 
+  text-align:center
+}
+.mast-head-wrapper{ 
+  
+}
+.menu-wrapper{  
+  margin-top:1em;
+  padding-left:1.6em;
+  padding-right:1.6em;
+  
+}
+
+.top-bar {
+    background: $grey-charcoal;
+}
+
+.top-bar-section li a:not(.button) {
+    background: $grey-charcoal !important;   
+}
+
+.top-bar-section li a:not(.button):hover {
+    background: #333333 !important;   
+}
+
+.top-bar-section ul li.active > a {
+    background: black !important;   
+}
+
+.top-bar-section ul li.active > a:hover {
+    background: #444444 !important;   
+}
+
+  .archive-container{  
+    padding:1em;
+    background:#EEE;
+    @include border-radius(8px);
+  }
+  .created-at{  
+    text-align:center;
+    font-size: .6rem;
+    background:#efe;
+    padding:4px 8px 4px 4px;
+  }
+
+  .archive-container{  
+    font-size:.8em;
+    padding:4px;
+    @include border-radius(8px);
+  }
+  .created-at{  
+    text-align:center;
+    margin-top:1rem;
+    font-size: .6rem;
+    background:#efe;
+    padding:4px 8px 4px 4px;
+  }
+  .button{  
+    background:$pink;
+  }
+  .time-ago-now{  
+    background:#eff;
+    font:.7rem italic verdana;
+    padding:4px;
+    opacity:.5;
+  }
+  .archive-image{  
+    margin-bottom:1rem;
+  }
+  .even{  
+    @include archive-container;
+    background:#ccc;
+    color: $grey-charcoal;
+    border:1px solid $grey-charcoal
+  }
+  .odd{  
+    @include archive-container;
+    background:#eee;
+    border:1px solid $grey-charcoal
+  }
+  .post-archive-footer-image{  
+    margin-top:1em;
+  }
+  .alert-info{ 
+    
+    background:$info-color;
+    color:#eee;
+    text-align:center;
+    font-size:.9em;
+    @include border-radius(.5em)
+    
+  }
+.user-edit, .sessions-new, .users-new , .comment-form{   input[type=text], textarea {
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;
+    padding: 3px 0px 3px 3px;
+    margin: 5px 1px 3px 0px;
+    border: 1px solid #DDDDDD;
+  }
+   
+  input[type=text]:focus, textarea:focus {
+    box-shadow: 0 0 5px rgba(240,128,128, 1);
+    padding: 3px 0px 3px 3px;
+    margin: 5px 1px 3px 0px;
+    border: 1px solid rgba(240, 128, 128, 1);
+  }
+  input[type=password]:focus, textarea:focus {
+    box-shadow: 0 0 5px rgba(240, 128, 128, 1);
+    padding: 3px 0px 3px 3px;
+    margin: 5px 1px 3px 0px;
+    border: 1px solid rgba(240,128,128, 1);
+  }
+}
+.comment-image-container{  
+  text-align:center;
+}
+
+

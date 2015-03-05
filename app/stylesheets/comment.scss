@@ -1,0 +1,24 @@
+@import "variables";
+@import "mixins";
+.comment-container{  
+  margin-top:2em;
+}
+
+.comment-item{ list-style-type: none; 
+  background:#eee;
+  margin: 2em;
+  padding:1em;
+  border-bottom:dotted .1em  #000;
+  @include border-radius(.5em);
+}
+.icon-large{  
+  font-size:2em;
+  opacity:.6;
+}
+.icon-small{  
+  font-size:.5em;
+  font-family: "arial";
+  font-style:italic;
+  opacity:.6;
+  color:#333;
+}

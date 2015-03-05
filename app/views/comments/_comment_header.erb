@@ -1,0 +1,15 @@
+<% if false %>
+  ###app/stylesheets/bases
+<% end %>
+<div class = "center">
+  <span>
+    <h3>
+    <%= pluralize(comment_header.comments.count, "comment") %>
+  </h3>
+  <%= time_split(Time.now) %>
+  </span>
+  <br>
+  <span class="post-link">
+  <a href="#Home-Top">Read Post</a>
+  </span>
+</div>
