@@ -1,0 +1,10 @@
+.DS_Store
+log/**/*
+tmp/**/*
+vendor/gems/*
+!vendor/gems/cache/
+.sass-cache/*
+public/uploads/**/*
+public/uploads/*
+db/*.db
+.*.sw*
