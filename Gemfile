@@ -11,7 +11,7 @@ gem 'padrino', '0.12.4'
 # gemspec
 
 # Server requirements
-# gem 'thin' # or mongrel
+ gem 'thin' # or mongrel
 # gem 'trinidad', :platform => 'jruby'
 
 # Optional JSON codec (faster performance)
