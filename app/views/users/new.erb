@@ -1,8 +1,19 @@
 <h1>Sign Up</h1>
-<span class="users-new"
-  <% form_for @user, url_for(:users, :create) do |f| %>
-    <%=partial 'shared/user_form', :object => @user, :locals => {:f => f, } %>
+  <%form_for :user, '/users/create'  do |f| %>
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+    <br>
+
+    <%= f.label :password %><br />
+    <%= f.password_field :password %>
+    <br>
+
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation %>
+    <p class="centered">
+        <%= f.submit "Signup", class: "button radius" %>
+    </p>
+
 
   <% end %>
-></span>
 

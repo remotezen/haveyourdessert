@@ -1,42 +1,26 @@
 Blog::App.controllers :users do
   before :update do 
     correct_user
-
   end
-  
-  # get :index, :map => '/foo/bar' do
-  #   session[:foo] = 'bar'
-  #   render 'index'
-  # end
-
-  # get :sample, :map => '/sample/url', :provides => [:any, :js] do
-  #   case content_type
-  #     when :js then ...
-  #     else ...
-  # end
-
-  # get :foo, :with => :id do
-  #   'Maps to url '/foo/#{params[:id]}''
-  # end
-
-  # get '/example' do
-  #   'Hello world!'
-  # end
   
   get :new do
     @user = User.new
     render 'users/new'
   end
-  post :create, params:[:user] do
+  
+  post :create do
     @user = User.new(params[:user])
+    
     if @user.save
+      login(@user)
       flash[:notice] = "Welcome aboard"
       redirect url('/')
     else
+      flash[:error] = "There was a problem with your registration"
       render 'users/new'
     end
-
   end
+
   
   get :edit, :map => '/users/:id/edit' do
     @user = User.find_by_id(params[:id])
@@ -72,4 +56,4 @@ end
       redirect_to('/')
     end
   end
-  end
+ end

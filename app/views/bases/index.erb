@@ -1,3 +1,4 @@
+<% if @post  %>
 <div class = "center image-wrapper">
   <%= image_tag(@post.image) %>
 </div>
@@ -21,5 +22,10 @@
     <%= partial 'shared/comment', object:@post %>
   <% else %>
     <%=partial 'shared/comment_not_logged_in'%>
+<%end%>
+<% else %>
+  <h1>
+    there are no posts
+  </h1>
 <%end%>
 

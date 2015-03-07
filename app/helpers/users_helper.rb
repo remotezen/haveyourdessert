@@ -13,8 +13,13 @@ module Blog
       # def simple_helper_method
       # ...
       # end
+  #
+ def  sym_to(sym)
+   sym.to_s.gsub("_", " ")
+ end
     end
 
     helpers UsersHelper
   end
+
 end
