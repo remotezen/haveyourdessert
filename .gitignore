@@ -8,3 +8,4 @@ public/uploads/**/*
 public/uploads/*
 db/*.db
 .*.sw*
+config/database.yml

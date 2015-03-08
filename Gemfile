@@ -22,6 +22,7 @@ gem 'rake'
 
 # Component requirements
 gem 'compass'
+gem 'capistrano', '~> 3.3.0'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'bcrypt'
