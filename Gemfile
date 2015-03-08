@@ -29,8 +29,9 @@ gem 'bcrypt'
 gem 'sass'
 gem 'erubis', '~> 2.7.0'
 gem 'activerecord', '>= 3.1', :require => 'active_record'
-gem 'sqlite3'
 gem 'pg'
+gem 'dalli'
+gem 'foreman'
 
 # Test requirements
 gem 'shoulda', :group => 'test'
@@ -39,7 +40,6 @@ gem 'rack-test', :require => 'rack/test', :group => 'test'
 # Padrino Stable Gem
 gem 'padrino-contrib'
 gem 'padrino-warden'
-gem 'bcrypt'
 
 # Or Padrino Edge
 # gem 'padrino', :github => 'padrino/padrino-framework'

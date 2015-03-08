@@ -18,7 +18,6 @@
 <fieldset class='control-group <%= error ? 'has-error' : ''%>'>
   <%= f.file_field :image, :class => 'control-label' %>
   <div class='controls'>
-    <%= f.text_field :image, :class => 'form-control input-xlarge input-with-feedback' %>
     <span class='help-inline'><%= error ? f.error_message_on(:image) : "Ex: a simple text" %></span>
   </div>
 </fieldset>

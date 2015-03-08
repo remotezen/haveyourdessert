@@ -56,7 +56,7 @@
           <td class=list-column> <%= recipe.id %> </td>
           <td class=list-column> <%= recipe.post_id %> </td>
           <td class=list-column> <%= recipe.ingredients %> </td>
-          <td class=list-column> <%= recipe.image %> </td>
+          <td class=list-column> <%= image_tag(recipe.image, width:50) %> </td>
           <td class=list-column> <%= recipe.title %> </td>
           <td class=list-column> <%= time_ago_in_words recipe.created_at %></td>
           <td class=list-column> <%= time_ago_in_words recipe.updated_at %></td>

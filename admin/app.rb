@@ -5,6 +5,12 @@ module Blog
     register Padrino::Helpers
     register Padrino::Admin::AccessControl
 
+  after do
+      logger.info "clearing active connection for this thread"
+      ActiveRecord::Base.connection.close
+    end
+  
+
     ##
     # Application configuration options
     #
