@@ -30,8 +30,10 @@ gem 'sass'
 gem 'erubis', '~> 2.7.0'
 gem 'activerecord', '>= 3.1', :require => 'active_record'
 gem 'pg'
+gem 'memcached'
 gem 'dalli'
 gem 'foreman'
+gem 'pg_search'
 
 # Test requirements
 gem 'shoulda', :group => 'test'
@@ -48,3 +50,4 @@ gem 'padrino-warden'
 # %w(core support gen helpers cache mailer admin).each do |g|
 #   gem 'padrino-' + g, '0.12.4'
 # end
+gem 'double_write_cache_stores'

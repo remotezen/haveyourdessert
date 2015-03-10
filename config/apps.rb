@@ -8,7 +8,7 @@
 #
 # You can also map apps to a specified host:
 #
-#   Padrino.mount('Admin').host('admin.example.org')
+#Padrino.mount('Admin').host('admin.localhost')
 #   Padrino.mount('WebSite').host(/.*\.?example.org/)
 #   Padrino.mount('Foo').to('/foo').host('bar.example.org')
 #
@@ -36,3 +36,6 @@ end
 
 Padrino.mount("Blog::Admin", :app_file => Padrino.root('admin/app.rb')).to("/admin")
 Padrino.mount('Blog::App', :app_file => Padrino.root('app/app.rb')).to('/')
+read_and_write_cache_store = ActiveSupport::Cache.lookup_store :dalli_store, 'localhost:11211'
+write_only_cache_store = ActiveSupport::Cache.lookup_store :dalli_store, 'localhost:21211'
+set :cache, DoubleWriteCacheStores::Client.new(read_and_write_cache_store, write_only_cache_store)

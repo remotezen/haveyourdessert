@@ -20,7 +20,8 @@ Blog::App.controllers :posts do
   # end
   
 
-  get :index, provides: [:html, :rss, :atom] do
+  get :index, provides: [:html, :rss, :atom], cache: true do
+    expires 180
     @posts = Post.order(created_at: :desc)
     render 'posts/index', layout: 'no_mast_head.erb'
   end

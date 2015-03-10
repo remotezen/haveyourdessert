@@ -1,4 +1,6 @@
 Blog::App.controllers :bases do
+  register Padrino::Cache
+
   
   # get :index, :map => '/foo/bar' do
   #   session[:foo] = 'bar'
@@ -19,13 +21,13 @@ Blog::App.controllers :bases do
   #   'Hello world!'
   # end
   
-  get :index do
-    
+  get :index, :cache => true do
+    expires 180
     @post = Post.last
     render 'bases/index' 
 
   end
-  get :about do
+  get :about, cache: true do
   end
 
 
