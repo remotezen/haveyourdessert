@@ -21,10 +21,8 @@ Blog::App.controllers :search do
   
   get :index do
     search = params[:search]
-    Profiler__.start_profile
     @posts =  Post.where("title LIKE ? OR body LIKE ?", 
                          "%#{search}%","%#{search}%").order(created_at: :DESC)
-    Profiler__.stop_profile
     render 'search/index'
   end
 

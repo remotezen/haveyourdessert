@@ -10,9 +10,8 @@ Blog::App.controllers :users do
   
   post :create do
     @user = User.new(params[:user])
-    
     if @user.save
-      login(@user)
+      log_in(@user)
       flash[:notice] = "Welcome aboard"
       redirect url('/')
     else

@@ -1,12 +1,15 @@
 class User < ActiveRecord::Base
   attr_accessor :password
+   EMAIL_REGEX = /^([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})$/i
   before_save :encrypt_password
   validates_confirmation_of :password
-  validates_presence_of :password, :on => :create
-  validates_presence_of :email
-  validates_uniqueness_of :email
-
+  validates_presence_of :password
+  validates_presence_of :email, 
+    uniqueness: { case_sensitive:false },
+    format: { with: EMAIL_REGEX }
+  validates_confirmation_of :email
   has_many :comments
+  has_many :recipes
 
 
   def self.authenticate(email, password)
