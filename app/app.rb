@@ -15,6 +15,7 @@ module Blog
   after do
       logger.info "clearing active connection for this thread"
       ActiveRecord::Base.connection.close
+      ActiveRecord::Base.clear_active_connections!
     end
 
     ##

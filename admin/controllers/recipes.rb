@@ -5,13 +5,15 @@ Blog::Admin.controllers :recipes do
     render 'recipes/index'
   end
 
-  get :new do
-    @title = pat(:new_title, :model => 'recipe')
+  get :new, :with => '(:id)'  do
+    
+    @title = "Create a Recipe"
+    @id = params[:id]
     @recipe = Recipe.new
     render 'recipes/new'
   end
 
-  post :create do
+  post :create  do
     @recipe = Recipe.new(params[:recipe])
     if @recipe.save
       upload = Upload.new

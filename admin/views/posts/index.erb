@@ -39,6 +39,7 @@
                 <th class=header> <%= mat(:post, :id) %></th>
                 <th class=header> <%= mat(:post, :title) %></th>
                 <th class=header> <%= mat(:post, :body) %></th>
+                <th class=header> <%= "new recipe" %></th>
                 <th class=header> <%= mat(:post, :account_id) %></th>
                 <th class=header> <%= mat(:post, :category) %></th>
                 <th class=header> <%= mat(:post, :created_at) %></th>
@@ -57,6 +58,7 @@
           <td class=list-column> <%= post.id %> </td>
           <td class=list-column> <%= post.title %> </td>
           <td class=list-column> <%= post.body %> </td>
+          <td class=list-column> <%= link_to "create recipe", url_for(:recipes, :new, id: post.id) %> </td>
           <td class=list-column> <%= post.account_id %> </td>
           <td class=list-column> <%= post.category %> </td>
           <td class=list-column> <%= time_ago_in_words post.created_at %></td>

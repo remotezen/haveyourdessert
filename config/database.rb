@@ -16,11 +16,11 @@
 ActiveRecord::Base.configurations[:development] = {
   :adapter   => 'postgresql',
   :database  => 'haveyourdessert',
+   :pool      => 8,
   :username  => 'postgres',
   :password  => 'duH21Fre',
   :host      => 'localhost',
-  :port      => 5432
-
+  :unix_socket_directory => 'tmp'
 }
 
 ActiveRecord::Base.configurations[:production] = {
@@ -29,7 +29,7 @@ ActiveRecord::Base.configurations[:production] = {
   :username  => 'grit',
   :password  => 'duH21Fre',
   :host      => 'localhost',
-  :port      => 5432
+  :unix_socket_directory => 'tmp'
 
 }
 
@@ -39,8 +39,7 @@ ActiveRecord::Base.configurations[:test] = {
   :username  => 'grit',
   :password  => 'duH21Fre',
   :host      => 'localhost',
-  :port      => 5432
-
+  :unix_socket_directory => 'tmp'
 }
 
 # Setup our logger
