@@ -1,6 +1,7 @@
 Blog::Admin.controllers :accounts do
   get :index do
     @title = "Accounts"
+    @page_title = "all of your recipes"
     @accounts = Account.all
     render 'accounts/index'
   end

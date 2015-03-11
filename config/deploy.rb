@@ -1,10 +1,10 @@
 # config valid only for current version of Capistrano
 lock '3.3.5'
 
-set :application, 'haveyourdessert.com'
+set :application, 'haveyourdessert'
 set :repo_url, 'git@example.com:remotezen/haveyourdessert.git'
 set :branch, 'master'
-set :server,  167.114.153.5
+set :server, 'haveyourdessert.com -p 54321' 
 
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
@@ -27,7 +27,7 @@ set :server,  167.114.153.5
 # Default value for :linked_files is []
 
  set :linked_files, fetch(:linked_files, []).push('config/database.yml')
-set :rb_type :system
+#set :rb_type :system
 set :rbenv_ruby, '2.1.5'
 set :rbenv_prefix, "RBENV_ROOT=#{fetch(:rbenv_path)} RBENV_VERSION=#{fetch(:rbenv_ruby)} #{fetch(:rbenv_path)}/bin/rbenv exec"
 set :rbenv_map_bins, %w{rake gem bundle ruby rails}

@@ -1,13 +1,25 @@
 Blog::Admin.controllers :recipes do
   get :index do
     @title = "Recipes"
+    @page_title = " Your Recipes"
     @recipes = Recipe.all
     render 'recipes/index'
+  end
+  
+  get :show, :with => :id  do
+   @recipe = Recipe.find(params[:id])
+   if @recipe
+     @page_title = @recipe.title
+     render 'recipes/show'
+   else
+     halt 404
+   end
   end
 
   get :new, :with => '(:id)'  do
     
     @title = "Create a Recipe"
+    @page_title = "Create a recipe"
     @id = params[:id]
     @recipe = Recipe.new
     render 'recipes/new'
@@ -30,6 +42,7 @@ Blog::Admin.controllers :recipes do
   end
 
   get :edit, :with => :id do
+    @page_title = "edit your recipe"
     @title = pat(:edit_title, :model => "recipe #{params[:id]}")
     @recipe = Recipe.find(params[:id])
     if @recipe

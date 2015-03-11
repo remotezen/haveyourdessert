@@ -23,6 +23,7 @@ gem 'rake'
 # Component requirements
 gem 'compass'
 gem 'capistrano', '~> 3.3.0'
+gem 'capistrano-bundler'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'bcrypt'
@@ -34,6 +35,7 @@ gem 'memcached'
 gem 'dalli'
 gem 'foreman'
 gem 'pg_search'
+gem 'capistrano-rbenv'
 
 # Test requirements
 gem 'shoulda', :group => 'test'
