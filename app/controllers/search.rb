@@ -21,8 +21,11 @@ Blog::App.controllers :search do
   
   get :index do
     search = params[:search]
-    @posts =  Post.where("title LIKE ? OR body LIKE ?", 
+    p =  Post.where("title LIKE ? OR body LIKE ?", 
                          "%#{search}%","%#{search}%").order(created_at: :DESC)
+    r = Recipe.where("title LIKE ? ", "%#{search}%").order(created_at: :DESC)
+    @posts = (r + p).sort_by(&:created_at)
+    
     render 'search/index'
   end
 

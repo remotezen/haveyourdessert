@@ -17,6 +17,9 @@
 <p class="center body-wrapper">
  <%= @post.body %>
 </p>
+<p>
+  <%= partial 'bases/recipe', collection: @post.recipes %>
+</p>
   <% if logged_in? %>
     <%= partial 'shared/comment_form', object: @post %>
     <%= partial 'shared/comment', object:@post %>

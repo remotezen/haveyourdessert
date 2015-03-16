@@ -5,7 +5,8 @@ Blog::Admin.controllers :steps do
     render 'steps/index'
   end
 
-  get :new do
+  get :new, :with => '(:id)' do
+    @id = params[:id]
     @title = pat(:new_title, :model => 'step')
     @step = Step.new
     render 'steps/new'
@@ -19,8 +20,8 @@ Blog::Admin.controllers :steps do
       upload.save
       @title = pat(:create_title, :model => "step #{@step.id}")
       flash[:success] = pat(:create_success, :model => 'Step')
-      params[:save_and_continue] ? redirect(url(:steps, :new)) : redirect(url(:steps, :edit, :id => @step.id))
-
+      redirect url(:steps, :new, :id => params[:step][:id] )
+      #params[:save_and_continue] ? redirect(url(:steps, :new)) : redirect(url(:steps, :edit))
     else
       @title = pat(:create_title, :model => 'step')
       flash.now[:error] = pat(:create_error, :model => 'step')

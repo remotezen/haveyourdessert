@@ -39,9 +39,12 @@
                 <th class=header> <%= mat(:recipe, :id) %></th>
                 <th class=header> <%= mat(:recipe, :post_id) %></th>
                 <th class=header> <%= mat(:recipe, :ingredients) %></th>
+                <th class=header> <%= "Add step" %></th>
+
                 <th class=header> <%= mat(:recipe, :image) %></th>
                 <th class=header> <%= mat(:recipe, :title) %></th>
                 <th class=header> <%= mat(:recipe, :created_at) %></th>
+                
                 <th class=header> <%= mat(:recipe, :updated_at) %></th>
                 <th class="header list-row-action-header"></th>
       </tr>
@@ -56,6 +59,7 @@
           <td class=list-column> <%= recipe.id %> </td>
           <td class=list-column> <%= recipe.post_id %> </td>
           <td class=list-column> <%= recipe.ingredients %> </td>
+          <td class=list-column> <%= link_to "add step", url_for(:steps, :new, :id =>recipe.id) %> </td>
           <td class=list-column> <%= link_to image_tag(recipe.image, width:50), url_for(:recipes,  :show, :id => recipe.id) %> </td>
           <td class=list-column> <%= recipe.title %> </td>
           <td class=list-column> <%= time_ago_in_words recipe.created_at %></td>

@@ -1,0 +1,4 @@
+<p><%= image_tag(recipe.image) %></p>
+<p> <%= recipe.title %></p>
+<p><%= simple_format(recipe.ingredients)%></p>
+<%= partial 'bases/step', collection: recipe.steps %>

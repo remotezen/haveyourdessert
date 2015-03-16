@@ -5,14 +5,19 @@
    <%= post_counter  %>.
 </span>
 <span class="search-header">
-    <%= link_to "#{post.title }", url_for(:posts, :show, id:post.permalink) %>
- </span>
+    <%= link_razor(post) %>
+</span>
     <br>
+    <% if post.class == Post %>   
     <span class="search-body">
-      <%= truncate_words("#{post.body }", length:20) %>
+      <%= truncate_words("#{post.body }", 
+      length:20) %>
   </span>
+  <%end%>
   <br>
   <span class="search-date">
     <%= time_split(post.created_at) %>
+</span>
+  <span class="search-date">
 </span>
     

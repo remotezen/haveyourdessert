@@ -11,13 +11,24 @@ module Blog
           real_title = "Have Your Dessert"
         end
       end
+      
+      def link_razor(obj)
+        if obj.class == Post
+          link_to(obj.title, url_for(:posts,:show, id: obj.permalink))
+        elsif obj.class  == Recipe
+          link_to(obj.title, url_for(:recipes,:show, id: obj.permalink))
+        end
+      end
+
+
       def image_cycle(* args)
 
         @_image_cycle ||= reset_image(args)
         @_image_cycle = [@_image_cycle.pop] + @_image_cycle
         @_image_cycle.first.to_s
       end
-    def cycle
+    
+      def cycle
       @_cycle ||= reset_cycle
       @_cycle = [@_cycle.pop] + @_cycle
       @_cycle.first
