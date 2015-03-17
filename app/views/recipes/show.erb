@@ -15,9 +15,10 @@
     <h3>
         Ingredients
     </h3>
-      
-      
-      <%= simple_format(@recipe.ingredients) %>
+    <%=link_to("show steps", 
+               url_for(:steps, :index, id: @recipe.id, format: :js), remote: true ) %>
+    <div id="steps-container">
+    </div>
+    <%= simple_format(@recipe.ingredients) %>
   </div>
-
 </div>
