@@ -31,9 +31,7 @@
 
   .search-form input[type=text]{  
     background:$grey-charcoal;
-    height:25px;
     border:white 1px solid;
-    width:12em;
     color:#eee;
     font-size:10px;
     @include border-radius(0px);

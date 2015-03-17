@@ -1,0 +1,23 @@
+@import "variables";
+@import "mixins";
+.recipe-container{ 
+  text-align: center;
+}
+
+.recipe-ingredients {  
+   color: $grey-charcoal;
+   margin-top: 2em;
+}
+ 
+.recipe-title{  
+  margin: 2.5em 0 4.5em 0;
+  h2{  
+    color:$grey-charcoal;
+  }
+}
+.recipe-image{  
+  text-align: center;
+  border: .5em solid $grey-charcoal;
+  @include border-radius(1em);
+
+}
