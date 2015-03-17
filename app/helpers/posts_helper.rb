@@ -3,6 +3,10 @@
 module Blog
   class App
     module PostsHelper
+  def is_pjax?
+      #  headers['X-PJAX']
+      env['HTTP_X_PJAX']
+    end
       def title(title = nil)
         unless title.blank?
           real_title =

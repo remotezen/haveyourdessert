@@ -15,10 +15,14 @@
     <h3>
         Ingredients
     </h3>
-    <%=link_to("show steps", 
-               url_for(:steps, :index, id: @recipe.id, format: :js), remote: true ) %>
-    <div id="steps-container">
-    </div>
+
     <%= simple_format(@recipe.ingredients) %>
   </div>
 </div>
+<div id="steps-container">
+    <%=link_to("show steps", 
+               url(:steps, :index, id: @recipe.id, format: :js), remote: true ) %>
+</div>
+<script type="text/javascript">
+$(function() { $('#steps-container' ).pjax('a'); });
+</script>
