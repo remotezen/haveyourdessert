@@ -8,6 +8,7 @@
   <div class="recipe-image">
     <%= image_tag(@recipe.image) %>
   </div>
+
   
   <div class="recipe-ingredients">
     
@@ -20,9 +21,20 @@
   </div>
 </div>
 <div id="steps-container">
+  <center>
     <%=link_to("show steps", 
-               url(:steps, :index, id: @recipe.id, format: :js), remote: true ) %>
+               url(:steps, :index, id: @recipe.id, format: :js), remote: true, class:"steps-display" ) %>
+</center>
 </div>
+<center>
+  <button class="button-toggle button round" style="background:#cd0067">Toggle Steps</button>
+</center>
+
 <script type="text/javascript">
-$(function() { $('#steps-container' ).pjax('a'); });
+ $(function() { $('#steps-container' ).pjax('a'); });
+$( "button" ).click(function() {
+$( ".step-partial" ).toggle();
+}
+);
+
 </script>

@@ -1,0 +1,16 @@
+<% @args = %w(step-odd step-even) %>
+<center>
+<div class="step-partial <%=bicycle%>">
+  
+  <div class="step-title step-inner">
+    <h4>
+      <%= step.title %>
+  </h4>
+</div>
+  <div><%= image_tag(step.image, width:300) %></div>
+  <div>
+    <%=step.step %>
+  </div>
+</div>
+</center>
+

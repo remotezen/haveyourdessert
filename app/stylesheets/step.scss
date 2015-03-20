@@ -1,0 +1,28 @@
+@import "variables";
+@import "mixins";
+
+.step-partial{  
+  text-align:center;
+  @include standard-spacing;
+  @include border-radius(1em)
+}
+.step-inner{  
+    margin-top:1em;
+    padding:1em;
+}
+.step-all{  
+  padding:1em;
+}
+.step-even {  
+  background: #EEE;
+}
+
+.step-odd {  
+  background: #ccc;
+}
+.step-outside{  
+  background: #ddd;
+}
+.step-title{  
+  color: $grey-charcoal;
+}

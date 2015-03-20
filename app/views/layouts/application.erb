@@ -12,8 +12,9 @@
     <%= favicon_tag "favicon.ico" %>
     <link type="text/css" rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" />
     <link href='http://fonts.googleapis.com/css?family=Varela' rel=stylesheet />
-    <%= stylesheet_link_tag 'application', 'post', 'bases', 'comment', 'mobile', 'recipes'%>
-    <%= javascript_include_tag 'vendor/modernizr', 'jquery', 'jquery-ujs' %>
+    <%= stylesheet_link_tag 'application', 'post', 'bases', 'comment', 'mobile', 'recipes','step'%>
+
+    <%= javascript_include_tag 'vendor/jquery', 'vendor/fastclick', 'vendor/jquery.pjax' %>
   </head>
   <body>
 <% if false %>
@@ -51,10 +52,8 @@
     <div class="small-12 small-centered">
       <div class="main-wrapper center">
         <%= {:error => 'danger', :warning => 'warning', :success => 'success', :notice => 'info'}.map { |type, class_name| flash_tag(type, :class => "alert alert-#{class_name} fade in") }.join.html_safe %>
-        <%= logged_in?.inspect %>
-
-
           <%= yield %>
+          <%= request.path %>
     </div>
   </div>
 </div>
@@ -67,5 +66,5 @@
 </div>
   </body>
 
-    <%= javascript_include_tag 'vendor/jquery', 'vendor/fastclick', 'vendor/jquery.pjax' %>
+
 </html>

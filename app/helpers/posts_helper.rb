@@ -29,11 +29,16 @@ module Blog
 
         @_image_cycle ||= reset_image(args)
         @_image_cycle = [@_image_cycle.pop] + @_image_cycle
-        @_image_cycle.first.to_s
+        @_image_cycle.first
       end
     
       def cycle
       @_cycle ||= reset_cycle
+      @_cycle = [@_cycle.pop] + @_cycle
+      @_cycle.first
+    end
+      def bicycle
+      @_cycle ||= reset_bicycle
       @_cycle = [@_cycle.pop] + @_cycle
       @_cycle.first
     end
@@ -46,6 +51,9 @@ module Blog
     
     def reset_cycle
     @_cycle = %w(even odd)
+    end
+    def reset_bicycle
+    @_cycle = %w(step-odd step-even step-outside)
     end
     # def simple_helper_method
     # end
