@@ -1,0 +1,49 @@
+@import "variables";
+.search-result-count{  
+  color: #666666;
+  text-align:center;
+  font-size:.8em;
+}
+.search-header{  
+  line-height:1.2em;
+  a{text-decoration:none;  
+    color:$search-link-color;
+    font-size:1.3em;
+}
+ li a{  
+  list-style-type:none; 
+ }
+ span{  
+   font-size:.9em;
+   color:$grey-search
+ }
+ p{  
+   font-size:.7em;
+   color:$grey-search;
+ }
+
+}
+.search-container{  
+  list-style-type:none;
+}
+.recipe-link{  
+  a{  
+    font-size:1em;
+    color: $green-search;
+  }
+}
+.search-container{  
+  border-left: solid $search-link-color 1px;
+  padding-left:1.5em;
+}
+.search-term{  
+  margin-bottom: 1.5em;
+  color: $green-search;
+  font-family:arial;
+  font-size: 1.5em;
+}
+.search-ingredients{  
+  text-align:left;
+}
+
+
