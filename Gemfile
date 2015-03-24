@@ -5,6 +5,7 @@ source 'https://rubygems.org'
 gem 'sinatra', git: 'git@github.com:sinatra/sinatra.git'
 
 gem 'padrino', '0.12.4'
+gem 'json'
 
 
 # Distribute your app as a gem
@@ -12,6 +13,7 @@ gem 'padrino', '0.12.4'
 
 # Server requirements
  gem 'thin' # or mongrel
+
 # gem 'trinidad', :platform => 'jruby'
 
 # Optional JSON codec (faster performance)
@@ -21,21 +23,31 @@ gem 'padrino', '0.12.4'
 gem 'rake'
 
 # Component requirements
+gem 'will_paginate', '~>3.0'
 gem 'compass'
 gem 'capistrano', '~> 3.3.0'
 gem 'capistrano-bundler'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'bcrypt'
-gem 'sass'
 gem 'erubis', '~> 2.7.0'
 gem 'activerecord', '>= 3.1', :require => 'active_record'
 gem 'pg'
-gem 'memcached'
 gem 'dalli'
 gem 'foreman'
 gem 'pg_search'
 gem 'capistrano-rbenv'
+gem 'redis'
+#gem 'padrino-sprockets', :require => ['padrino/sprockets'], :git => 'git://github.com/nightsailer/padrino-sprockets.git'
+## Add to your Padrino Gemfile…
+
+# Assets
+gem 'sass'
+gem 'uglifier'
+gem 'sinatra-assetpack'
+gem 'sinatra-support', :require => 'sinatra/support/compasssupport'
+#########rake db:setup RACK_ENV=production 
+# Component requirements
 
 # Test requirements
 gem 'shoulda', :group => 'test'

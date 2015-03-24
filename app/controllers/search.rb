@@ -19,14 +19,26 @@ Blog::App.controllers :search do
   #   'Hello world!'
   # end
   
-  get :index do
+  get :index  do
     search = params[:search]
+    @search_term = search
     p =  Post.where("title LIKE ? OR body LIKE ?", 
                          "%#{search}%","%#{search}%").order(created_at: :DESC)
     r = Recipe.where("title LIKE ? ", "%#{search}%").order(created_at: :DESC)
-    @posts = (r + p).sort_by(&:created_at)
-    
+    s = (r + p).sort_by(&:created_at)
+      @posts = s.paginate(:page => params[:page], :per_page => 12)
     render 'search/index'
+  end
+  get :autocomplete,  provides: :json do
+
+    search = params[:search]
+    @search_term = search
+    p =  Post.where("title LIKE ? OR body LIKE ?", 
+                         "%#{search}%","%#{search}%").order(created_at: :DESC)
+    r = Recipe.where("title LIKE ? ", "%#{search}%").order(created_at: :DESC)
+    @s = (r + p)
+    @s.to_json
+   
   end
 
 end

@@ -1,7 +1,7 @@
 ---
-user: grit 
-group: web 
-environment: development 
+user: nginx
+group: nginx 
+environment: production 
 timeout: 30
 wait: 30
 log: log/thin.log

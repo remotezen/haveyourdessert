@@ -26,10 +26,11 @@ ActiveRecord::Base.configurations[:development] = {
 ActiveRecord::Base.configurations[:production] = {
   :adapter   => 'postgresql',
   :database  => 'haveyourdessert',
-  :username  => 'grit',
+  :username  => 'postgres',
+   :pool      => 8,
   :password  => 'duH21Fre',
   :host      => 'localhost',
-  :unix_socket_directory => 'tmp'
+  :unix_socket_directory => './tmp'
 
 }
 

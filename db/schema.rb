@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 17) do
+ActiveRecord::Schema.define(version: 18) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -66,7 +66,10 @@ ActiveRecord::Schema.define(version: 17) do
     t.datetime "updated_at"
     t.string   "permalink"
     t.integer  "comment_id"
+    t.integer  "recipe_id"
   end
+
+  add_index "posts", ["recipe_id"], name: "index_posts_on_recipe_id", using: :btree
 
   create_table "recipes", force: :cascade do |t|
     t.integer  "post_id"

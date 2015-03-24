@@ -17,8 +17,11 @@
 <p class="center body-wrapper">
  <%= @post.body %>
 </p>
-<p>
-  <%= partial 'bases/recipe', collection: @post.recipes %>
+
+<p><%= image_tag(@post.recipe.image) %></p>
+<p> <%= @post.recipe.title %></p>
+<p><%= simple_format(@post.recipe.ingredients)%></p>
+<%= partial 'bases/step', collection: @post.recipe.steps %>
 </p>
   <% if logged_in? %>
     <%= partial 'shared/comment_form', object: @post %>

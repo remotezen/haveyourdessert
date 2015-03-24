@@ -26,8 +26,12 @@ Blog::Admin.controllers :recipes do
   end
 
   post :create  do
-    @recipe = Recipe.new(params[:recipe])
+    @post = Post.find_by_id(params[:recipe][:post_id])
+    @recipe = @post.recipes.build(params[:recipe])
+    
     if @recipe.save
+      hash = { recipe_id: @recipe.id }
+      @post.update_attributes(hash)
       upload = Upload.new
       upload.file = params[:recipe][:image]
       upload.save

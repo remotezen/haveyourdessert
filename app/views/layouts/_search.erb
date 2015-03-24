@@ -6,7 +6,7 @@
   <form action="/search", method="get">
       <div class="row collapse prefix-round">
         <div class="small-2 columns">
-          <input type="submit"  value= " " class="search-input button round prefix">
+          <input type="submit"  value= " " class="search-input button round prefix", id="search", autocomplete: :off>
         </div>
         <div class="small-7 small-pull-3 columns">
           <input type="text" name="search" placeholder="search the site... ">
@@ -14,3 +14,30 @@
       </div>
         </form>
     </div>
+
+<script type="text/javascript">
+$(function() {
+    var db = "#{<%= Recipe.all.to_json %>}"
+ 
+    $("#search").autocomplete({
+source: db,
+        minLength: 2,
+        select: function(event, ui) {
+            var url = ui.item.id;
+            if(url != '#') {
+                location.href = '/search/autocomplete + url';
+            }
+        },
+ 
+        html: true, // optional (jquery.ui.autocomplete.html.js required)
+ 
+      // optional (if other layers overlap autocomplete list)
+        open: function(event, ui) {
+            $(".ui-autocomplete").css("z-index", 1000);
+        }
+    });
+ 
+});
+
+</script>
+

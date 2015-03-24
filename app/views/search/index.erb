@@ -1,17 +1,23 @@
-<% unless @posts.blank? %>
-<ul class="search-results">
-<div class="search-container">
-      <li><%= partial '/posts/post', collection:@posts  %></li>
+
+<div class="search-term">
+  <center><%= "search results for #{@search_term }" %></center>
 </div>
-</ul>
+<% unless @posts.blank? %>
+<div class="search-container small-12 ">
+      <%= partial '/posts/post', collection:@posts  %>
+</div>
 <% else %>
   <span class="no-results">
     <h1>Your search term rendered no results</h1>
   </span>
 <%end%>
-  <div class="small-12 center small-centered search-counter">
+  <div class="small-8  center small-centered search-result-count">
     <%= pluralize(@posts.count, "result") %>
 </div>
  
   
 </div>
+<center>
+  <%= will_paginate @posts %>
+</center>
+

@@ -36,5 +36,12 @@ $( "button" ).click(function() {
 $( ".step-partial" ).toggle();
 }
 );
+$(function () {
+  $(".button-toggle").hide();
+  $(".steps-display").click(function (e) {
+    $(".button-toggle").show();
+  });
+});
+
 
 </script>

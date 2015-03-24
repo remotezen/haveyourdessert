@@ -1,23 +1,45 @@
 <% if false %>
   post.scss stylesheet
 <% end %>
-  <span class="counter">
-   <%= post_counter  %>.
-</span>
-<span class="search-header">
-    <%= link_razor(post) %>
-</span>
+
+
+<div class="search-header">
+  <%if post.class == Post %>   
+    <span class="search-image">
+      <%= image_tag(post.image, width:50) %>
+    </span>
+    <%= link_to post.title, url(:posts, :show, post.permalink) %>
     <br>
-    <% if post.class == Post %>   
-    <span class="search-body">
-      <%= truncate_words("#{post.body }", 
-      length:20) %>
-  </span>
-  <%end%>
-  <br>
-  <span class="search-date">
+    <%unless post.recipe.blank?%>
+      <span class="recipe-link">
+      <%= link_to(post.recipe.title, url(:recipes, :show, post.recipe.permalink))%> 
+      </span>
+    <%end %>
+    <br>
+    <%= truncate_words("#{post.body }", length:20) %>
+    <p>
     <%= time_split(post.created_at) %>
-</span>
-  <span class="search-date">
-</span>
+    </p>
+  <% elsif post.class == Recipe %>
+    <span class="search-image">
+      <%= image_tag(post.image, width:50) %>
+    </span>
+    
+    <%= link_to post.title, url(:recipes, :show, post.permalink) %>
+    <br>
+    <% unless post.post.blank? %>
+
+      <span class="recipe-link">
+       <%= link_to(post.post.title, url(:recipes, :show, post.post.permalink))%> 
+      </span>
+    <%end%>
+    <span class="search-ingredients">
+      <%=simple_format(post.ingredients)%>
+  </span>
+    <p>
+    <%= time_split(post.created_at).to_s.chomp %>
+    </p>
+
+  <%end%>
+  </div>
     

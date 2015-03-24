@@ -10,11 +10,10 @@
     <meta name=viewport content='width=device-width,initial-scale=1' />
     <title><%= title(@title) %></title>
     <%= favicon_tag "favicon.ico" %>
-    <link type="text/css" rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" />
     <link href='http://fonts.googleapis.com/css?family=Varela' rel=stylesheet />
-    <%= stylesheet_link_tag 'application', 'post', 'bases', 'comment', 'mobile', 'recipes','step'%>
+    <%= stylesheet_link_tag 'application', 'post', 'bases', 'comment', 'mobile', 'recipes','step', 'search'%>
 
-    <%= javascript_include_tag 'vendor/jquery', 'vendor/fastclick', 'vendor/jquery.pjax' %>
+    <%= javascript_include_tag 'vendor/jquery', 'jquery-ui/jquery-ui','vendor/fastclick', 'vendor/jquery.pjax' %>
   </head>
   <body>
 <% if false %>
@@ -53,7 +52,6 @@
       <div class="main-wrapper center">
         <%= {:error => 'danger', :warning => 'warning', :success => 'success', :notice => 'info'}.map { |type, class_name| flash_tag(type, :class => "alert alert-#{class_name} fade in") }.join.html_safe %>
           <%= yield %>
-          <%= request.path %>
     </div>
   </div>
 </div>
