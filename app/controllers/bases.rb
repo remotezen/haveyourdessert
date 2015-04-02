@@ -27,7 +27,8 @@ Blog::App.controllers :bases do
     render 'bases/index' 
 
   end
-  get :about, cache: true do
+  get :about do
+    render 'bases/about'
   end
 
 
